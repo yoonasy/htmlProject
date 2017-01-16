@@ -422,11 +422,7 @@ a{
 .fixed{
 	position:fixed;
 	right:0;
-<<<<<<< HEAD
 	bottom:306px;
-=======
-	bottom:305px;
->>>>>>> 2281c522f95ed6ade2326f91e07f2f8d8f8450c4
 	z-index: 1;
 	height:270px;
 }

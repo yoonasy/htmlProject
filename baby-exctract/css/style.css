@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors yoonasy (yoonasy@qq.org)
+ * @date    2017-01-10 15:33:05
+ * @version $1$
+ */
+
+body{font-family:"Microsoft Yahei";color:#333;}
+*{margin:0;padding:0;}
+a{color:#39349C;}
+li{list-style-type:none;}
+h1{text-align:center;margin:20px 0;}
+hr{width:98%;margin:0 auto;}
+input{width:180px;height:28px;}
+img{vertical-align: middle;}
+
+.Seller{
+    text-align:center;
+}
+
+.top{
+    width:888px;
+    margin:0 auto;
+    padding:8px 6px;
+
+}
+
+.header{
+    width:900px;
+    margin:0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.code_input{
+    width:60px;
+    text-align:center;
+    font-size:18px;
+}
+
+.btn{
+    width:100px;
+    height:32px;
+    border:1px solid #999;
+}
+.btn:hover{
+    border:1px solid #666;
+}
+
+.order{
+    margin-right:20px;
+    text-align:center;
+}
+
+.nick{
+    width:160px;
+    text-align:center;
+}
+
+.content{
+    width:900px;
+    height:333px;
+    margin:0 auto;
+    padding-top:28px;
+    margin-bottom:72px;
+    position:relative;
+}
+
+.floor{
+    width:900px;
+    text-align:center;
+    margin:8px auto;
+}
+
+.focus{
+    height:333px;
+    width:900px;
+    background: white;
+    position:absolute;
+}
