@@ -1,0 +1,562 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前网页的编码集：中文编码（GBK/GB2312），国际编码（utf-8）--->	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--声明当前页面的三要素-->
+		<title>java唯品会开发 - Sy</title>
+		<meta name="Keywords" content="关键词,关键词,关键词">
+		<meta name="description" content=""><!--描述信息（百度快照）八十个字以内-->
+		
+		<!--css/js-->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{font-size:14px;color:#666;font-family:'微软雅黑';background:white;}
+			a{text-decoration:none;color:#666;font-size:14px;}
+			li{float:left;list-style-type:none;}
+			.auto{width:1170px;margin:0 auto;}
+
+			/*start header*/
+				/*start top_tools*/
+			.header{width:100%;height:168px;}
+			.header .h_top{width:100%;height:28px;background:#f5f5f5;}
+			.header .h_top{background:;}
+			.header .h_top .h_box .h_addrbox{float:left;}
+			.header .h_top .h_box .h_addrbox .h_address{height:28px;line-height:28px;font-size:12px;color:#555;padding:0px 15px;cursor:pointer;}
+			.header .h_top ._icon{border-color:#999 transparent transparent transparent;border-style:solid dashed dotted dashed;vertical-align:middle;display:inline-block;}
+			.header .h_top .h_box .h_addrbox .h_address .addr{margin:7px 0px 0px 16px;border-width:5px;}
+				/*start right_tools*/
+			.header .h_top .h_box .h_menu_tools{float:right;}
+			.header .h_top .h_box .h_menu_tools li{list-style:none;float:left;padding:0px 16px;background:url('images/wp-nav-cutline.png')no-repeat right center;line-height:26px;}
+			.header .h_top .h_box .h_menu_tools li a{color:#777;display:inline-block;}
+			.header .h_top .h_box .h_menu_tools li a:hover{color:#f10180;}
+			.header .h_top .h_box .h_menu_tools .piblic{border-width:4px;margin:0 0 -6px -2px;}
+			.header .h_top .h_box .h_menu_tools .more{background:none;}
+			.header .h_top .h_box .h_menu_tools .h_icon_phone{display:inline-block;width:10px;height:14px;background:url('images/header.png')no-repeat -100px -150px;vertical-align:middle;margin:-2px 6px 0 -2px;}
+				/*end right_tools*/
+				/*end top_tools*/
+
+			/*.header .h_box .h_menu_tools .h_icon_phone:hover{background-position:-125px -150px;} 用js控制hover效果*/
+				/*start logo*/
+			.header .h_logo_box{height:100px;}
+			.header .h_logo_box .h_logo a{display:block;width:266px;height:78px;background:url('images/logo.gif')no-repeat;float:left;}
+			.header .h_logo_box .h_logo_ico{float:right;height:100px;display:inline-flex;}
+			.header .h_logo_box .h_logo_ico a{}
+			.header .h_logo_box .h_shopp{width:114px;float:right;margin:30px 0 0 45px;}
+			.header .h_logo_box .h_shopp .h_shopping{position:relative;float:right;line-height:29px;width:111px;height:29px;padding:10px 5px 8px 10px;}
+			.header .h_logo_box .h_shopp .h_shopping .h_ico_bag{background:url('images/header.png')no-repeat 7px -55px;float:left;width:28px;height:28px;display:inline-block;margin-right:5px;}
+			.header .h_logo_box .h_shopp .h_shopping .h_shopp_text{font-size:12px;color:#333;}
+			.header .h_logo_box .h_shopp .h_shopping .h_ico_shopp{position:absolute;display:inline-block;width:16px;height:17px;background:#f10180;left:24px;border-radius:40%;}
+			.header .h_logo_box .h_shopp .h_shopping .h_ico_shopp .h_bag_text{position:absolute;right:4px;top:-6px;font-size:14px;color:white;}
+			.header .h_logo_box .h_shopp .h_shopping .h_split{position:absolute;height:10px;border-left:1px solid #ddd ;display:inline-block;left:0px;top:20px;}
+				/*end logo*/
+
+				/*nav start*/
+			.header .n_nav{width:100%;height:40px;background:#f10180;}
+			.header .n_nav .n_cen{line-height:40px;position:relative;}
+			.header .n_nav .n_cen .n_navigate li a{text-align:center;display:block;height:40px;color:white;font-size:16px;font-family:'微软雅黑';padding:0 16px;}
+			.header .n_nav .n_cen .n_navigate li a:hover{background:#db0a76;}
+			.header .n_nav .n_cen .n_navigate .n_navselect{background:#bd1067;}
+			.header .n_nav .n_cen .n_navigate .n_navselect:hover{background:#bd1067;}
+			.header .n_nav .n_cen .n_navigate .ico_more{margin-left:5px;margin-bottom:5px;margin-top:10px;border-width:4px;vertical-align:middle;border-color:#fff transparent transparent transparent;}
+			.header .n_nav .n_cen .n_navigate .n_adv{width:20px;height:32px;display:inline-block;vertical-align:middle;background:url('images/adv.png')no-repeat;margin:-3px 5px 0px 0px;}
+			.header .n_nav .n_cen .n_navigate .n_class{position:absolute;right:0;padding: 0 32px;}
+			.header .n_nav .n_cen .n_navigate .n_class .n_ico_class{width:20px;height:32px;display:inline-block;vertical-align:middle;background:url('images/find.png')no-repeat;margin:-6px 4px 0 0;}
+				/*end nav*/
+			/*end header*/
+
+			/*banner start*/
+			.centent .banner{width:100%;background:url('images/banner_bg.jpg')no-repeat top center;padding-top:30px;padding-bottom:30px;}
+			.centent .banner .b_box{width:1144px;margin:0 auto;height:413px;background:#fff;padding:12px;box-shadow:0 3px 8px #999;padding-bottom:0;border-radius:2px;}
+			.centent .banner .b_box .b_banimg{height:400px;}
+			/*end banner*/
+
+			/*centent start*/
+			.centent .c_bodyh{height:68px;margin-top:20px;}
+			.centent .c_commodity{width:1208px;margin-top:20px;}
+			.centent .c_commodity .c_comm{display:inline-flex;margin:0 6px 24px 19px;position:relative;overflow:hidden;}
+			.centent .c_commodity .c_comm:hover a .c_logo{-webkit-filter:blur(5px);}
+			.centent .c_commodity .c_comm:hover .brand_cen{opacity:1;}
+			.centent .c_commodity .c_comm .c_ico{width:320px;height:100px;position:absolute;right:50%;margin-right:-160px;bottom:30px;background:rgba(255,255,255,0.9);border-radius:4px;text-align:center;display:block;}
+			.centent .c_commodity .c_comm .c_img{margin-top:5px;}
+			.centent .c_commodity .c_comm .c_ico .areate{color:#333;display:block;font-size:14px;font-weight:bold;margin-bottom:-3px;}
+			.centent .c_commodity .c_comm .c_ico .are{color:#333;vertical-align:middle;}
+			.centent .c_commodity .c_comm .brand_cen{background:#fff;position:absolute;width:520px;height:300px;left:50%;margin-left:-260px;top:50%;margin-top:-150px;border-radius:5px;box-shadow:0 2px 5px #e5e5e5;opacity:0;transition:opacity .25s ease-out .1s}
+			
+			.centent .c_commodity .c_comm .brand_cen .brand_shop{height:219px;text-align:center;margin-left:16px;margin-top:10px;}
+			.centent .c_commodity .c_comm .brand_cen .brand_shop p{color:#222;font-weight:bold;line-height:30px;font-size:14px;}
+			.centent .c_commodity .c_comm .brand_cen .brand_shop a{margin-right:16px;display:inline-block;line-height:30px;font-size:14px;text-align:center;}
+			.centent .c_commodity .c_comm .brand_cen .brand_shop a img{width:140px;height:177px;vertical-align:text-bottom;}
+			.centent .c_commodity .c_comm .brand_cen .shop_coll a{display:inline-block;width:100px;height:50px;float:left;margin:10px 25px 2px 25px;}
+			.centent .c_commodity .c_comm .brand_cen .shop_coll .go_into_sessin{width:140px;height:28px;float:right;margin-top:22px;border-radius:5px;background:#fff;border:1px solid #999;color:#333;font-size:16px;text-align:center;line-height:28px;}
+			.centent .c_commodity .c_comm .brand_cen .shop_coll .go_into_sessin:hover{background:#333;color:white;}
+			.centent .c_commodity .c_comm .brand_cen .shop_coll{border-top:1px dashed #999;height:50px;}
+			.centent .c_commodity .c_comm .brand_cen .shop_coll .c_colls{height:22px;background:#fff;width:85px;border-radius:12px;float:left;margin:25px 0 0 0;border:1px solid #e5e5e5;cursor:pointer;}
+			.centent .c_commodity .c_comm .brand_cen .shop_coll .c_colls .vfont{float:left;font-size:16px;font-family:"iconfont";display:inline-block;margin:3px 5px 0px 8px;color:#f10180;}
+			.centent .c_commodity .c_comm .brand_cen .shop_coll .c_colls:hover{background:#f10180;border:1px solid #f10180;}
+			.centent .c_commodity .c_comm .brand_cen .shop_coll .c_colls:hover .vfont{color:white;}
+			.centent .c_commodity .c_comm .brand_cen .shop_coll .c_colls:hover .clos_shop{color:white;}
+			.centent .c_commodity .c_comm .brand_cen .shop_coll .c_colls .clos_shop{color:#777;font-size:12px;cursor:pointer;}
+			/*-----------------------------------------------------------------------------------------------------*/
+			@font-face {
+				font-family:'iconfontright';
+				src:url('font/iconfont_.eot');
+				src:url('font/iconfont_.eot?#iefix') format('embedded-opentype'),
+				url('font/iconfont_.woff') format('woff'),
+				url('font/iconfont_.ttf') format('truetype'),
+				url('font/iconfont_.svg#iconfont') format('svg');
+			}
+			@font-face {font-family: 'iconfont';
+				src: url('font/iconfont.eot'); /* IE9*/
+				src: url('font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+				url('font/iconfont.woff') format('woff'), /* chrome、firefox */
+				url('font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+				url('font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+			}
+			.centent .woman{height:43px;margin-top:30px;display:block;border-bottom:1px solid #000;}
+			.centent .woman a{color:#000;float:right;line-height:50px;font-size:16px;}
+			.centent .woman a:hover{color:#f10180;}
+			.centent .woman .woman_ico{font-family:"iconfontright";margin-left:5px;font-size:16px;}
+			.centent .woman .women_title{font-size:16px;}
+
+			/*-----------------------------------------------------------------------------------------------------*/
+			.centent .woman_comm{width:1208px;margin-top:30px;}
+			.centent .woman_comm .wman_shopp{display:inline-block;position:relative;left:19px;margin-right:27px;margin-bottom:30px;}
+			.wman_shopp .shop_title{height:40px;line-height:40px;padding:0 20px 0 20px;margin-top:-5px;}
+			.wman_shopp .shop_title .brand_name{color:#444;font-size:16px;padding-left:10px;}
+			.wman_shopp .shop_title .brand_time{float:right;}
+			.wman_shopp .shop_title .brand_time .time_ico{float:left;width:16px;height:17px;display:inline-block;background:url('images/index_imgs.png')no-repeat -50px 0px;margin-top:11px;margin-right:8px;}
+			.wman_shopp .shop_title .brand_time .time_title{font-size:14px;display:inline-block;}
+			.wman_shopp .shop_title .brand_sale{color:#f10180;font-size:26px;font-weight:bold;line-height:26px;margin-right:}
+			
+			
+			/*end centent*/
+			.clear{clear:both;}
+		</style>
+
+	</head>
+<body>
+	<!--header start-->
+	<div class="header">
+		<!--top_tools start-->
+		<div class="h_top">
+			<div class="auto h_box">
+				<div class="h_addrbox">
+					<div class="h_address">
+						<span class="h_addrtext">四川</span>
+						<i class="h_icon addr"></i>
+					</div>
+				</div>
+				<ul class="h_menu_tools">
+					<li><a href="#">请登录</a></li>
+					<li><a href="#">注册</a></li>
+					<li><a href="#">我的订单</a></li>
+					<li>
+						<a href="#">我的收藏</a>
+						<i class="_icon piblic i_favorites"></i>
+					</li>
+					<li>
+						<a href="#">会员俱乐部</a>
+						<i class="_icon piblic i_vip_club"></i>
+					</li>
+					<li>
+						<a href="#">客户服务</a>
+						<i class="_icon piblic i_service"></i>
+					</li>
+					<li>
+						<a href="#">
+							<i class="_icon_phone"></i>手机版
+						</a>
+					</li>
+					<li class="more">
+						<a href="#">更多</a>
+						<i class="_icon piblic i_more"></i>
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<!--end top_tools-->
+
+		<!--logo start-->
+		<div class="auto h_logo_box">
+			<div class="h_logo">
+				<a href="http://vip.com"></a>
+			</div>
+			<div class="h_shopp">
+				<div class="h_shopping">
+					<a href="#">
+						<i class="h_split"></i>
+						<span class="h_ico_shopp">
+							<span class="h_bag_text">0</span>
+						</span>
+						<i class="h_ico_bag"></i>
+						<span class="h_shopp_text">我的购物袋</span>
+					</a>
+				</div>
+			</div>
+			
+			<div class="h_logo_ico">
+				<a href="#"><img src="images/header_enclose1.png" alt="100%正品" width="126" height="100" /></a>
+				<a href="#"><img src="images/header_enclose2.png" alt="7天放心退" width="126" height="100" /></a>
+				<a href="#"><img src="images/header_enclose3.png" alt="退货返运费" width="126" height="100" /></a>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<!--end logo-->
+
+		<!--nav start-->
+		<div class="n_nav">
+			<div class="auto n_cen">
+				<ul class="n_navigate">
+					<li><a href="#" class="n_navselect" style="font-weight:bold;">8.26秋上新</a></li>
+					<li><a href="#" style="font-weight:bold;">唯品国际</a></li>
+					<li><a href="#" style="font-weight:bold;">母婴</a></li>
+					<li><a href="#" style="font-weight:bold;">居家</a></li>
+					<li><a href="#">男士</a></li>
+					<li><a href="#">美妆</a></li>
+					<li><a href="#">唯品金融</a></li>
+					<li><a href="#">旅行</a></li>
+					<li><a href="#">更多<i class="_icon ico_more"></i></a></li>
+					<li><a href="#"><i class="n_adv"></i>预告</a></li>
+					<li><a href="#" class="n_class"><i class="n_ico_class"></i>分类</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--end nav-->
+	</div>
+	<!--end header-->
+
+	<!--start centent-->
+	<div class="centent">
+		<!--banner start-->
+		<div class="banner">
+			<div class="b_box">
+				<div class="b_banimg">
+					<div class="logo_shop">
+						<a href="#">
+							<img src="images/banner.jpg" alt="vipbanner" width="1144" height="400" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--end banner-->
+		<!--everydayhot start-->
+		<div class="auto c_bodyh">
+			<img src="images/today_DDp.png" alt="" width="1170" height="68" />
+		</div>
+		<div class="auto c_commodity">
+			<div class="c_comm">
+				<a href="#">
+					<img class="c_logo" src="images/commodity_1.jpg" alt="YINER精致优雅 喜悦知性" width="570" height="350" />
+				</a>
+				<a href="#" class="c_ico">
+					<img class="c_img" src="images/comm_1.png" alt="YINER精致优雅 喜悦知性" width="100" height="50" />
+					<span class="areate">YINER精致优雅 喜悦知性</span>
+				</a>
+				<div class="brand_cen">
+					<div class="brand_shop">
+						<a href="#"><img src="images/commodity_1_1.jpg" alt="YINER" width="140" height="177" /><p>&yen;345</p></a>
+						<a href="#"><img src="images/commodity_1_2.jpg" alt="YINER" width="140" height="177" /><p>&yen;376</p></a>
+						<a href="#"><img src="images/commodity_1_3.jpg" alt="YINER" width="140" height="177" /><p>&yen;395</p></a>
+					</div>
+					<div class="shop_coll">
+						<a href="#"><img src="images/comm_1.png" alt="YINER精致优雅 喜悦知性" width="100" height="50" /></a>
+						<div class="c_colls">
+							<span class="vfont">&#xe602;</span>
+							<span class="clos_shop">收藏品牌</span>
+						</div>
+						<a class="go_into_sessin" href="javascript:void(0);">进入专场</a>
+					</div>
+				</div>
+			</div>
+			<div class="c_comm">
+				<a href="#">
+					<img class="c_logo" src="images/commodity_2.jpg" alt="引发高级时装的个性力量" width="570" height="350" />
+				</a>
+				<a href="#" class="c_ico">
+					<img class="c_img" src="images/comm_2.png" alt="引发高级时装的个性力量" width="100" height="50" />
+					<span class="areate">引发高级时装的个性力量</span>
+				</a>
+				<div class="brand_cen">
+					<div class="brand_shop">
+						<a href="#"><img src="images/commodity_2_1.jpg" alt="" width="140" height="177" /><p>&yen;979</p></a>
+						<a href="#"><img src="images/commodity_2_2.jpg" alt="" width="140" height="177" /><p>&yen;1189</p></a>
+						<a href="#"><img src="images/commodity_2_3.jpg" alt="" width="140" height="177" /><p>&yen;809</p></a>
+					</div>
+					<div class="shop_coll">
+						<a href="#"><img src="images/comm_2.png" alt="引发高级时装的个性力量" width="100" height="50" /></a>
+						<div class="c_colls">
+							<span class="vfont">&#xe602;</span>
+							<span class="clos_shop">收藏品牌</span>
+						</div>
+						<a class="go_into_sessin" href="javascript:void(0);">进入专场</a>
+					</div>
+				</div>
+			</div>
+			<div class="c_comm">
+				<a href="#">
+					<img class="c_logo" src="images/commodity_3.jpg" alt="K-BOXING茄克为男人而生" width="570" height="350" />
+				</a>
+				<a href="#" class="c_ico">
+					<img class="c_img" src="images/comm_3.png" alt="K-BOXING茄克为男人而生" width="100" height="50" />
+					<span class="areate">K-BOXING茄克为男人而生</span>
+					<span class="are">跨专场购物满399减50，满799减120</span>
+				</a>
+				<div class="brand_cen">
+					<div class="brand_shop">
+						<a href="#"><img src="images/commodity_3_1.jpg" alt="" width="140" height="177" /><p>&yen;289</p></a>
+						<a href="#"><img src="images/commodity_3_2.jpg" alt="" width="140" height="177" /><p>&yen;289</p></a>
+						<a href="#"><img src="images/commodity_3_3.jpg" alt="" width="140" height="177" /><p>&yen;349</p></a>
+					</div>
+					<div class="shop_coll">
+						<a href="#"><img src="images/comm_3.png" alt="K-BOXING茄克为男人而生" width="100" height="50" /></a>
+						<div class="c_colls">
+							<span class="vfont">&#xe602;</span>
+							<span class="clos_shop">收藏品牌</span>
+						</div>
+						<a class="go_into_sessin" href="javascript:void(0);">进入专场</a>
+					</div>
+				</div>
+			</div>
+			<div class="c_comm">
+				<a href="#">
+					<img class="c_logo" src="images/commodity_4.jpg" alt="Scofield时尚 优雅 干练" width="570" height="350" />
+				</a>
+				<a href="#" class="c_ico">
+					<img class="c_img" src="images/comm_4.png" alt="Scofield时尚 优雅 干练" width="100" height="50" />
+					<span class="areate">Scofield时尚 优雅 干练</span>
+				</a>
+				<div class="brand_cen">
+					<div class="brand_shop">
+						<a href="#"><img src="images/commodity_4_1.jpg" alt="" width="140" height="177" /><p>&yen;645</p></a>
+						<a href="#"><img src="images/commodity_4_2.jpg" alt="" width="140" height="177" /><p>&yen;645</p></a>
+						<a href="#"><img src="images/commodity_4_3.jpg" alt="" width="140" height="177" /><p>&yen;645</p></a>
+					</div>
+					<div class="shop_coll">
+						<a href="#"><img src="images/comm_4.png" alt="Scofield时尚 优雅 干练" width="100" height="50" /></a>
+						<div class="c_colls">
+							<span class="vfont">&#xe602;</span>
+							<span class="clos_shop">收藏品牌</span>
+						</div>
+						<a class="go_into_sessin" href="javascript:void(0);">进入专场</a>
+					</div>
+				</div>
+			</div>
+			<div class="c_comm">
+				<a href="#">
+					<img class="c_logo" src="images/commodity_5.jpg" alt="风尚早秋 舒适畅行" width="570" height="350" />
+				</a>
+				<a href="#" class="c_ico">
+					<img class="c_img" src="images/comm_5.png" alt="风尚早秋 舒适畅行" width="100" height="50" />
+					<span class="areate">风尚早秋 舒适畅行</span>
+					<span class="are">满498减80，上不封顶</span>
+				</a>
+				<div class="brand_cen">
+					<div class="brand_shop">
+						<a href="#"><img src="images/commodity_5_1.jpg" alt="" width="140" height="177" /><p>&yen;499</p></a>
+						<a href="#"><img src="images/commodity_5_2.jpg" alt="" width="140" height="177" /><p>&yen;569</p></a>
+						<a href="#"><img src="images/commodity_5_3.jpg" alt="" width="140" height="177" /><p>&yen;599</p></a>
+					</div>
+					<div class="shop_coll">
+						<a href="#"><img src="images/comm_5.png" alt="风尚早秋 舒适畅行" width="100" height="50" /></a>
+						<div class="c_colls">
+							<span class="vfont">&#xe602;</span>
+							<span class="clos_shop">收藏品牌</span>
+						</div>
+						<a class="go_into_sessin" href="javascript:void(0);">进入专场</a>
+					</div>
+				</div>
+			</div>
+			<div class="c_comm">
+				<a href="#">
+					<img class="c_logo" src="images/commodity_6.jpg" alt="奏响秋冬潮流乐章" width="570" height="350" />
+				</a>
+				<a href="#" class="c_ico">
+					<img class="c_img" src="images/comm_6.png" alt="奏响秋冬潮流乐章" width="100" height="50" />
+					<span class="areate">奏响秋冬潮流乐章</span>
+					<span class="are">满498减80，上不封顶</span>
+				</a>
+				<div class="brand_cen">
+					<div class="brand_shop">
+						<a href="#"><img src="images/commodity_6_1.jpg" alt="" width="140" height="177" /><p>&yen;589</p></a>
+						<a href="#"><img src="images/commodity_6_2.jpg" alt="" width="140" height="177" /><p>&yen;489</p></a>
+						<a href="#"><img src="images/commodity_6_3.jpg" alt="" width="140" height="177" /><p>&yen;489</p></a>
+					</div>
+					<div class="shop_coll">
+						<a href="#"><img src="images/comm_6.png" alt="奏响秋冬潮流乐章" width="100" height="50" /></a>
+						<div class="c_colls">
+							<span class="vfont">&#xe602;</span>
+							<span class="clos_shop">收藏品牌</span>
+						</div>
+						<a class="go_into_sessin" href="javascript:void(0);">进入专场</a>
+					</div>
+				</div>
+			</div>
+			<div class="c_comm">
+				<a href="#">
+					<img class="c_logo" src="images/commodity_7.jpg" alt="Columbia尝试是进步的动力" width="570" height="350" />
+				</a>
+				<a href="#" class="c_ico">
+					<img class="c_img" src="images/comm_7.png" alt="Columbia尝试是进步的动力" width="100" height="50" />
+					<span class="areate">Columbia尝试是进步的动力</span>
+					<span class="are">满300减80，上不封顶</span>
+				</a>
+				<div class="brand_cen">
+					<div class="brand_shop">
+						<a href="#"><img src="images/commodity_7_1.jpg" alt="" width="140" height="177" /><p>&yen;476</p></a>
+						<a href="#"><img src="images/commodity_7_2.jpg" alt="" width="140" height="177" /><p>&yen;799</p></a>
+						<a href="#"><img src="images/commodity_7_3.jpg" alt="" width="140" height="177" /><p>&yen;799</p></a>
+					</div>
+					<div class="shop_coll">
+						<a href="#"><img src="images/comm_7.png" alt="Columbia尝试是进步的动力" width="100" height="50" /></a>
+						<div class="c_colls">
+							<span class="vfont">&#xe602;</span>
+							<span class="clos_shop">收藏品牌</span>
+						</div>
+						<a class="go_into_sessin" href="javascript:void(0);">进入专场</a>
+					</div>
+				</div>
+			</div>
+			<div class="c_comm">
+				<a href="#">
+					<img class="c_logo" src="images/commodity_8.jpg" alt="谢瑞麟非凡工艺 潮流演绎" width="570" height="350" />
+				</a>
+				<a href="#" class="c_ico">
+					<img class="c_img" src="images/comm_8.png" alt="谢瑞麟非凡工艺 潮流演绎" width="100" height="50" />
+					<span class="areate">谢瑞麟非凡工艺 潮流演绎</span>
+					<span class="are">满600减50，上不封顶</span>
+				</a>
+				<div class="brand_cen">
+					<div class="brand_shop">
+						<a href="#"><img src="images/commodity_8_1.jpg" alt="" width="140" height="177" /><p>&yen;980</p></a>
+						<a href="#"><img src="images/commodity_8_2.jpg" alt="" width="140" height="177" /><p>&yen;530</p></a>
+						<a href="#"><img src="images/commodity_8_3.jpg" alt="" width="140" height="177" /><p>&yen;832</p></a>
+					</div>
+					<div class="shop_coll">
+						<a href="#"><img src="images/comm_8.png" alt="谢瑞麟非凡工艺 潮流演绎" width="100" height="50" /></a>
+						<div class="c_colls">
+							<span class="vfont">&#xe602;</span>
+							<span class="clos_shop">收藏品牌</span>
+						</div>
+						<a class="go_into_sessin" href="javascript:void(0);">进入专场</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--end everydayhot-->
+		<div class="auto woman">
+			<img src="images/woman.png" alt="" width="" height="" />
+			<a class="women_title" href="#">全部女装品牌<span class="woman_ico">&#xe617;</span></a>
+		</div>
+		<!--women start-->
+		<div class="auto woman_comm">
+			<div class="wman_shopp">
+				<a href="#">
+					<img src="images/woman_1.jpg" alt="" width="570" height="273" />
+					<div class="shop_title">
+						<span class="brand_name">唱功靠实力 气场拼衣品</span>
+						<span class="brand_time">
+							<i class="time_ico"></i>
+							<span class="time_title">剩3天</span>
+						</span>
+					</div>
+				</a>
+			</div>
+			<div class="wman_shopp">
+				<a href="#">
+					<img src="images/woman_2.jpg" alt="" width="570" height="273" />
+					<div class="shop_title">
+						<span class="brand_sale">0.5</span>折起
+						<span class="brand_name">HTDG和SOLO CELEB男女装混合专场</span>
+						<span class="brand_time">
+							<i class="time_ico"></i>
+							<span class="time_title">剩6天</span>
+						</span>
+					</div>
+				</a>
+			</div>
+			<div class="wman_shopp">
+				<a href="#">
+					<img src="images/woman_3.jpg" alt="" width="570" height="273" />
+					<div class="shop_title">
+						<span class="brand_sale">0.9</span>折起
+						<span class="brand_name">EP女装专场</span>
+						<span class="brand_time">
+							<i class="time_ico"></i>
+							<span class="time_title">剩1天</span>
+						</span>
+					</div>
+				</a>
+			</div>
+			<div class="wman_shopp">
+				<a href="#">
+					<img src="images/woman_4.jpg" alt="" width="570" height="273" />
+					<div class="shop_title">
+						<span class="brand_sale">0.6</span>折起
+						<span class="brand_name">ochirly女装专场</span>
+						<span class="brand_time">
+							<i class="time_ico"></i>
+							<span class="time_title">剩3天</span>
+						</span>
+					</div>
+				</a>
+			</div>
+			<div class="wman_shopp">
+				<a href="#">
+					<img src="images/woman_5.jpg" alt="" width="570" height="273" />
+					<div class="shop_title">
+						<span class="brand_sale">3</span>折起
+						<span class="brand_name">恩裳insun女装专场</span>
+						<span class="brand_time">
+							<i class="time_ico"></i>
+							<span class="time_title">剩3天</span>
+						</span>
+					</div>
+				</a>
+			</div>
+			<div class="wman_shopp">
+				<a href="#">
+					<img src="images/woman_6.jpg" alt="" width="570" height="273" />
+					<div class="shop_title">
+						<span class="brand_name">CEREL VOGUE女装专场</span>
+						<span class="brand_time">
+							<i class="time_ico"></i>
+							<span class="time_title">剩3天</span>
+						</span>
+					</div>
+				</a>
+			</div>
+			<div class="wman_shopp">
+				<a href="#">
+					<img src="images/woman_7.jpg" alt="" width="570" height="273" />
+					<div class="shop_title">
+						<span class="brand_sale">1.5</span>折起
+						<span class="brand_name">卡汶kavon女装专场</span>
+						<span class="brand_time">
+							<i class="time_ico"></i>
+							<span class="time_title">剩4天</span>
+						</span>
+					</div>
+				</a>
+			</div>
+			<div class="wman_shopp">
+				<a href="#">
+					<img src="images/woman_8.jpg" alt="" width="570" height="273" />
+					<div class="shop_title">
+						<span class="brand_sale">0.9</span>折起
+						<span class="brand_name">Five Plus女装专场</span>
+						<span class="brand_time">
+							<i class="time_ico"></i>
+							<span class="time_title">剩2天</span>
+						</span>
+					</div>
+				</a>
+			</div>
+		<!--end women-->
+		</div>
+	</div>
+	<!--end centent-->
+</body>
+</html>
