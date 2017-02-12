@@ -419,9 +419,32 @@ div.floor > div > div.floor-top > div.right > a.get-btn{
 .fixed{
 	position:fixed;
 	right:0;
-	bottom:339px;
 	z-index: 1;
-	height:270px;
+	bottom: 215px;
+	/* bottom:339px;
+	height:270px; */
+}
+
+.fixed .sig-box{
+	width: 115px;
+	margin: 30px 0;
+}
+
+.fixed .bm-btn{
+	display: block;
+	width: 115px;
+	height: 30px;
+	background: #e2365b;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 0 0 0 5px;
+	margin-top: -5px;
+}
+
+.fixed .sig-box .sig-img{
+	border-radius: 5px 0 0 0;
 }
 
 .fixed .back-to-top{
