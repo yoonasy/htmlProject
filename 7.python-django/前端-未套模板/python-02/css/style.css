@@ -114,14 +114,11 @@ a{
 .main .main-bg .content .work-pic{
 	width:1000px;
 	height:500px;
-	background-image:url("../images/index03.png");
-	background-repeat:no-repeat;
 }
 
 .main .main-bg .content .tcl{
 	width:1000px;
 	height:480px;
-	background-image:url("../images/index_04.jpg");
 }
 
 .main .main-bg .content .tcl-text{
@@ -201,6 +198,207 @@ a{
 
 .main .main-bg .content .goog{
 	position:relative;
+}
+
+.main .main-bg .content .goog .tmall-comment{
+	
+}
+
+.main .main-bg .content .goog .tmall-comment .good-head{
+	overflow: hidden;
+	position: relative;
+}
+
+.tm-middle{
+	padding: 10px 0;
+	border-left: 1px solid #efefef;
+	border-right: 1px solid #efefef;
+}
+
+.comment-list li{
+	border-bottom:1px solid #efefef;
+}
+
+.main .main-bg .content .goog .tmall-comment .good-head .good-sum{
+	background: #8e0101;
+	color: white;
+	padding-left: 16px;
+	line-height: 30px;
+	display: block;
+	height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+.main .main-bg .content .goog .tmall-comment .good-head .tm-middle-l{
+	width: 65px;
+	float: left;
+	padding: 0 25px;
+	border-right: 1px dotted #ddd;
+	text-align: center;
+}
+.main .main-bg .content .goog .tmall-comment .good-head .tm-middle-l p{
+	color: #333;
+}
+.main .main-bg .content .goog .tmall-comment .good-head .tm-middle-l strong{
+	color: #f60;
+	font-size: 28px;
+	text-align: center;
+}
+
+.star{
+	margin-left: 2px;
+	display: block;
+	width: 60px;
+	height: 12px;
+	background-image: url('../images/star-icon.png');
+	background-repeat: no-repeat;
+	background-position: 0px -27px;
+}
+
+.start-hot{
+	margin: 0;
+	width: 57px;
+	background: url('../images/star-icon.png')no-repeat;
+	background-position: 0 -15px;
+}
+
+.tm-middle-r{
+	float: left;
+	padding-left: 242px;
+	padding-top: 20px;
+}
+
+.scroll{
+	width: 400px;
+	height: 16px;
+	background: url('../images/good.png')no-repeat 0 0;
+	position: relative;
+}
+
+.surprised{
+	position: absolute;
+	height: 23px;
+	top: -23px;
+	left: 13px;
+}
+
+.good-scroll-icon{
+	width: 30px;
+	height: 23px;
+	display: block;
+	background: url('../images/good.png')no-repeat;
+	background-position: -418px 1px;
+	float: right;
+	text-align: center;
+	line-height: 17px;
+	color: white;
+}
+
+.tm-head-text{
+	padding-left: 38px;
+}
+
+.tm-head-text li{
+	width: 80px;
+	float: left;
+	text-align: center;
+}
+
+input[name=sel]{
+	vertical-align: middle;
+}
+
+#cont{
+	vertical-align: middle;
+}
+
+#sel-sor{
+	width: 83px;
+	text-align: center;
+	padding-left: 16px;
+	background: #efefef;
+	margin-left: 5px;
+}
+
+.control-right{
+	float: right;
+}
+
+.tm-control{
+	padding: 10px 16px;
+	background: #efefef;
+	border: 1px solid #c8c8c8;
+	border-top: 2px solid #c8c8c8;
+}
+
+/* 用户评价内容 */
+
+.comment-append,.comment-main{
+	position: relative;
+	padding-left: 115px;
+}
+.append-tag,.comment-tag{
+	width: 104px;
+	height: 50px;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.comment-meta p{
+	color: #999;
+}
+
+.append-title,.comment-tag,.comment-title{
+	color: #999;
+}
+
+.append-titmer,.comment-titmer{
+	color: #ccc;
+}
+
+.append-titmer{
+	padding-top: 5px;
+}
+
+.comment-content{
+	min-height: 40px;
+	padding-bottom: 10px;
+	color: #333;
+}
+.append-content{
+	color: #333;
+}
+
+.comment-master{
+	width: 615px;
+	padding: 16px 17px;
+	padding-right: 30px;
+}
+
+.comment-list td{
+	border-bottom: 1px solid #e3e3e3;
+}
+
+.comment-meta,.user{
+	width: 165px;
+}
+
+.user-level{
+	overflow: hidden;
+}
+	
+.user-level a img{
+	vertical-align: sub;
+}
+
+
+
+.main .main-bg .content .goog .tmall-comment .good-head .clear{
+	clear: both;
 }
 
 .main .main-bg .content .goog .goog-desc{
@@ -299,29 +497,27 @@ a{
 	/* border-bottom: 1px solid #515151; */
 }
 
-div.floor > div > div.floor-top > div.left{
+.floor div .floor-top .left{
 	width: 533px;
 	float: left;
 	padding-top:36px;
 }
 
-div.floor > div > div.floor-top > div.right{
+.floor .floor-top .right{
 	width: 467px;
 	float: right;
 	position: relative;
 	padding-bottom: 2px;
 }
 
-div.floor > div > div.floor-top > div.right > div.python-icon{
+.floor .floor-top .right .python-icon{
 	width: 190px;
 	height: 178px;
-	background-image: url('../images/py-icon.png');
-	background-size: 100% 100%;
 	display: inline-block;
 	margin: 30px 0 10px 70px;
 }
 
-div.floor > div > div.floor-top > div.right > div.se-code-icon{
+.floor .floor-top .right .se-code-icon{
 	width: 135px;
 	height:173px;
 	background-image: url('../images/se_code.png');
@@ -331,7 +527,7 @@ div.floor > div > div.floor-top > div.right > div.se-code-icon{
 	margin: 10px 16.5px 0 0;
 }
 
-div.floor > div > div.floor-top > div.right > a.get-btn{
+.floor .floor-top .right .get-btn{
 	display: block;
 	width: 168px;
 	height: 40px;
@@ -420,7 +616,8 @@ div.floor > div > div.floor-top > div.right > a.get-btn{
 	position:fixed;
 	right:0;
 	z-index: 1;
-	bottom: 215px;
+	top: 50%;
+	margin-top: -226px;
 	/* bottom:339px;
 	height:270px; */
 }
