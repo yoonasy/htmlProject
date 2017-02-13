@@ -514,7 +514,7 @@ input[name=sel]{
 	width: 190px;
 	height: 178px;
 	display: inline-block;
-	margin: 30px 0 10px 70px;
+	margin: 24px 0 10px 277px;
 }
 
 .floor .floor-top .right .se-code-icon{
@@ -623,25 +623,25 @@ input[name=sel]{
 }
 
 .fixed .sig-box{
-	width: 115px;
+	width: 210px;
 	margin: 30px 0;
 }
 
 .fixed .bm-btn{
 	display: block;
-	width: 115px;
-	height: 30px;
+	width: 210px;
+	height: 40px;
 	background: #e2365b;
 	color: white;
 	font-size: 16px;
 	text-align: center;
-	line-height: 30px;
-	border-radius: 0 0 0 5px;
+	line-height: 40px;
+	border-radius: 0 0 0 10px;
 	margin-top: -5px;
 }
 
 .fixed .sig-box .sig-img{
-	border-radius: 5px 0 0 0;
+	border-radius: 10px 0 0 0;
 }
 
 .fixed .back-to-top{
