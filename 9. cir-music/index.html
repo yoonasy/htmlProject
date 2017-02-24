@@ -1,0 +1,239 @@
+{% load static %}
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="Keywords" content="">
+        <meta name="description" content="">
+        <title>音乐播放器</title>
+        <style type="text/css">
+            *{margin:0;padding:0;}
+            body{color: #333;font-size: 12px;font-family: "Microsoft Yahei";width:100%;height:100%;}
+            html,.bg{
+            	width:100%;
+            	height:100%;
+            }
+            a{text-decoration:none;color:#666;}
+            li{list-style-type:none;}
+			
+			.bg{
+				background:url("http://p1.music.126.net/i-LL4ljuWQCnPhgD2LVM2A==/3419481182319177.jpg");
+				background-size: cover;
+				-webkit-filter: blur(50px);
+				-o-filter: blur(50px);
+				filter: blur(50px);
+				position: absolute;
+				z-index: -1;
+			}
+
+			.main{
+				width: 415px;
+				height: 415px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin: -207px 0 0 -207px;
+				border-radius: 50%;
+				overflow: hidden;
+				-webkit-transform: rotate(0deg);
+				-ms-transform: rotate(0deg);
+				-o-transform: rotate(0deg);
+				transform: rotate(0deg);
+				box-shadow: 0 0 3em #000;
+			}
+
+			.shade{
+				width: 415px;
+				height: 300px;
+				background: url('{% static "images/shade.png" %}');
+				position: absolute;
+				bottom: 0;
+			}
+
+			.seek{
+				width: 400px;
+				height: 198px;
+				position: absolute;
+				left: 50%;
+				margin-left: -200px;
+				bottom: 0;
+				overflow: hidden;
+			}
+
+			.border{
+				width: 364px;
+				height: 364px;
+				position: absolute;
+				bottom: 7.5px;
+				left: 50%;
+				border: 18px solid #222;
+				margin-left: -200px;
+				border-radius: 50%;
+			}
+
+			.progress-bar{
+				width: 392px;
+				height: 392px;
+				background: url({% static "images/progress_bar.png" %});
+				position: absolute;
+				left: 50%;
+				margin-left: -196px;
+				bottom: -15px;
+			}
+
+			.progress-btn{
+				width: 10px;
+				height: 10px;
+				border: 4px solid #000;
+				position: absolute;
+				top: -209px;
+				left: 50%;
+				margin-left: -7px;
+				border-radius: 50%;
+				background: white;
+				transform-origin: 7px 200px;
+			}
+
+			@keyframes rotate{
+				0%{transform: rotate(0deg);}
+				100%{transform: rotate(360deg);}
+			}
+			@-webkit-keyframes rotate{
+				0%{transform: rotate(0deg);}
+				100%{transform: rotate(360deg);}
+			}
+
+			.rotate{
+				-webkit-animation: rotate 3s infinite linear;
+				-o-animation: rotate 3s infinite linear;
+				animation: rotate 3s infinite linear;
+			}
+
+			.control{
+				position: absolute;
+				z-index: 1;
+				width:160px;
+				text-align: center;
+				left: 50%;
+				margin-left: -80px;
+				top: 206px;
+				color: white;
+			}
+
+			.icon{
+				display: inline-block;
+				vertical-align: middle;
+
+			}
+
+			.play-control{
+				width: 160px;
+				height: 56px;
+				background: rgba(33,33,33,0.5);
+				border-radius: 28px;
+				box-shadow: 0 0 2em #000;
+			}
+
+			.play{
+				width: 56px;
+				height: 56px;
+				background: url("{% static "images/pause.png" %}");
+				background-size: 100% 100%;
+			}
+
+			.play:hover{
+				background: url("{% static "images/pause_hover.png" %}");
+				background-size: 100% 100%
+			}
+
+			.pre,.next{
+				width: 42px;
+				height: 42px;
+				background: url("{% static "images/pre.png" %}");
+				background-size: 100% 100%;
+			}
+
+			.next:hover{
+				background: url("{% static "images/next_hover.png" %}");
+				background-size: 100% 100%;
+			}
+
+			.pre:hover{
+				background: url("{% static "images/pre_hover.png" %}");
+				background-size: 100% 100%;
+			}
+
+			.next{
+				background: url("{% static "images/next.png" %}");
+				background-size: 100% 100%;
+			}
+
+			.time{
+				display: block;
+				width: 100px;
+				padding: 5px 5px;
+				background: #000;
+				font-size: 14px;
+				border-radius: 15px;
+				margin: 0 auto;
+				margin-top: 30px;
+			}
+
+			.text{
+				margin-top: 7px;
+			}
+
+			.text p{
+				padding: 2px 10px;
+			}
+        </style>
+        <link href="" rel="stylesheet">
+</head>
+<body>
+    <!-- 背景 -->
+    <div class="bg"></div>
+	
+	<!-- 展示区域 -->
+	<div class="main">
+		<img class="rotate" src="http://p1.music.126.net/i-LL4ljuWQCnPhgD2LVM2A==/3419481182319177.jpg" alt="" width="415" height="415" />	
+		<!-- 遮罩层 -->
+		<div class="shade">
+			<div class=""></div>
+		</div>
+
+		<!-- 进度条 -->
+		<div class="seek">
+			<div class="border">
+				<div class="progress-bar" style="transform: rotate(130deg);"></div>
+			</div>
+			<a href="javascript:void(0);" style="transform: rotate(130deg);" class="progress-btn"></a>
+		</div>
+
+		<!-- 控制面板 -->
+		<div class="control">
+			<div class="play-control">
+				<a href="javasciprt:void(0);" class="icon pre"></a>
+				<a href="javasciprt:void(0);" class="icon play"></a>
+				<a href="javasciprt:void(0);" class="icon next"></a>
+			</div>
+			<!-- 时间 -->
+			<span class="time">
+				<span>02:11</span>
+				/
+				<span >03:38</span>
+			</span>
+
+			<div class="text">
+				<p>同学们新年快乐</p>
+				<p>炫酷播放器-Slice</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- h5音频元素 -->
+	<audio autoplay loop src="http://111.23.5.169:82/m2.music.126.net/y819plo8PDVdYhBMxA3SlA==/18634523069216534.mp3"></audio>
+    <script>
+        
+    </script>
+</body>
+</html>
