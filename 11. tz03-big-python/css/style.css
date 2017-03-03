@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /**
  * 
  * @authors slice (limyoonasy@gmail.com)
@@ -1627,6 +1627,7 @@ body{color: #333;font-size: 12px;font-family: "Microsoft Yahei";}
 	margin-top: -250px;
 	color: white;
 	border-radius: 10px 0 0 10px;
+	z-index: 99;
 }
 
 .fixed_icon{
