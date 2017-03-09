@@ -1,0 +1,163 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="Keywords" content="">
+        <title>Network - Slice</title>
+
+        <!-- Theme -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/animate.min.css" />
+        <link rel="stylesheet" href="css/vegas.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="http://at.alicdn.com/t/font_xtmtjsdjlmc84cxr.css">
+</head>
+<body>
+    
+    <div class="popup-window">
+        <div id="shade">
+            <div class="shade-container">
+                <div class="stick stick-1"></div>
+                <div class="stick stick-2"></div>
+                <div class="stick stick-3"></div>
+            </div>
+            <div class="col-xs-12">
+                <p class="text-info">testing</p>
+            </div>
+            <span id="ok">ok</span>
+        </div>
+    </div><!-- shade -->
+    <div class="page-loader"></div><!-- while loader page -->
+    <span id="h-animate" class="wow zoomInLeft" data-wow-delay="2s">&#10084;</span><!-- strat heart -->
+<!--===== Begin Header =====-->
+<header>
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-sm-6">
+                <div class="logo wow bounceInDown" data-wow-delay="0.4s">
+                    <a class="site-logo" href="index.html">Teacher Hadron</a>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="logo-desc wow bounceInRight" data-wow-delay="0.4s">
+                    <span class="logo-desc-text" href="index.html"><i class="iconfont">&#xe619;</i>Hadron Network Disk</span>
+                </div>
+            </div>
+
+        </div><!-- /.Row -->
+    </div><!-- ./container -->
+</header>
+<!--===== END Header =====-->
+
+
+
+<!--===== Begin Update File =====-->
+<section id="content">
+    <div class="container">
+
+        <div class="col-sj-12">
+            <!-- update-file-container -->
+            <div class="up-container wow bounceIn" data-wow-delay="0.9s">
+                <form id="form" action="/disk/index.html" method="post" runat="server" enctype="multipart/form-data">
+                    <input id="files" name="files" multiple="multiple" style="display: none;" class="file-addr" type="file" />
+                    <input id="files-info" readonly="value" type="text" placeholder="Please select a file to upload" />
+                    <input type="button" value="Update File" />
+                </form><!-- /.Upload Form -->
+            </div>
+            
+            <!-- file-list -->
+            <div class="show-file bounceIn" style="display: none;" >
+
+                <div class="file-title">
+                    <div class="file-name">FileName</div>
+                    <div class="file-size">FileSize</div>
+                    <div class="file-date">FileDate</div>
+                    <div class="file-link">FileLink</div>
+                </div>
+
+                <!-- <div class="file-content">
+                    <div class="file-name">FileName</div>
+                    <div class="file-size">800M</div>
+                    <div class="file-date">2017-04-1</div>
+                    <div class="file-link" style="padding-right: 46px;"> <a id="link" href="/disk/index.html">http://xx/xx/xx</a>
+                 
+                    </div>
+                    <button data-clipboard-target="#link">Copy</button>
+                </div> -->
+
+            </div><!-- /.file list -->
+        </div>
+
+    </div><!-- /.container -->
+</section>
+<!--===== END Update File =====-->
+
+
+
+<!--===== Begin Text =====-->
+<section>
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-12 col-xs-12">
+                <div class="h1-border wow rollIn" data-wow-delay="0.7s">
+                    <h1>Hadron Network Disk</h1>
+                </div>
+            </div>
+
+        </div><!-- /.row -->
+    </div>
+</section>
+<!--===== END Text =====-->
+
+
+
+<!--===== Begin Page Description =====-->
+<section>
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-xs-12">
+                <h1 class="wow fadeInUp" data-wow-delay="0.4s"><span>About</span> The Desc...</h1>
+                <p class="about-text wow slideInLeft">1. Upload the file size is not more than 5M</p>
+                <p class="about-text wow slideInLeft">2. Please properly keep network backup link</p>
+            </div>
+
+        </div><!-- /.row -->
+    </div>
+</section>
+<!--===== END Page Description =====-->
+
+
+
+<!--===== Begin Footer =====-->
+<footer class="foot">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-12">
+                <p class="wow bounceIn footer-text" data-wow-delay="0.7s" style="visibility: visible;animation-delay: 0.7s;animation-name: bounceIn;">Copyright © 2017.Company name All rights reserved.</p>
+            </div>
+
+        </div><!-- /.row -->
+    </div>
+</footer>
+<!--===== END Footer =====-->
+
+
+    <!-- ThemePlug -->
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/vegas.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
+
+    <!-- Page -->
+    <script src="js/index.js"></script>
+</body>
+</html>
