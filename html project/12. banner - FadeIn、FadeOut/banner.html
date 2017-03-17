@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="Keywords" content="">
+        <title>Banner - Slice</title>
+        <link href="css/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="http://at.alicdn.com/t/font_r1k9vscxuc4vlsor.css" />
+</head>
+<body>
+
+<!-- Begin Banner -->
+<div class="banner" onselectstart='return false'>
+    
+    <div class="banner-img">
+        <a href="javascript: void(0);"><img src="img/1.jpg" alt="" width="750" height="398" /></a>
+        <a href="javascript: void(0);"><img src="img/2.jpg" alt="" width="750" height="398" /></a>
+        <a href="javascript: void(0);"><img src="img/3.jpg" alt="" width="750" height="398" /></a>
+        <a href="javascript: void(0);"><img src="img/4.jpg" alt="" width="750" height="398" /></a>
+        <a href="javascript: void(0);"><img src="img/5.jpg" alt="" width="750" height="398" /></a>
+        <a href="javascript: void(0);"><img src="img/6.jpg" alt="" width="750" height="398" /></a>
+        <a href="javascript: void(0);"><img src="img/7.jpg" alt="" width="750" height="398" /></a>
+        <a href="javascript: void(0);"><img src="img/8.jpg" alt="" width="750" height="398" /></a>
+        <a href="javascript: void(0);"><img src="img/5.jpg" alt="" width="750" height="398" /></a>
+    </div>
+
+    <div class="banner-page">
+        <a href="javascript: void(0);" class="iconfont previous-page">&#xe705;</a>
+        <a href="javascript: void(0);" class="iconfont next-page">&#xe605;</a>
+    </div>
+
+    <div class="banner-btn">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+</div><!-- /.Banner -->
+
+<script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+
+/* =============================================== */
+/*  Banner
+/* =============================================== */
+    (function(){
+
+        /* ======================================= */
+        /*  BannerGlobalValue
+        /* ======================================= */
+        var $bannerImg = $('.banner-img a img');
+        var $bannerLi = $('.banner-btn ul li');
+        var $bannerPage = $('.banner-page a')
+        var index = 0;
+        var timer = 0;
+
+
+
+        /* ======================================= */
+        /*  BannerDefault
+        /* ======================================= */
+        $bannerImg.eq(0).show();
+        $bannerLi.eq(0).addClass("on");
+
+
+
+        /* ======================================= */
+        /*  Img and Li related
+        /* ======================================= */
+        $bannerLi.mouseover(function() {
+
+            if( index == $(this).index() ) return;
+
+            $bannerImg.eq(index).stop(false,true).fadeOut(300);
+            $bannerLi.eq(index).removeClass("on");
+
+            index = $(this).index();
+            $bannerImg.eq(index).stop(false,true).fadeIn(300);
+            $bannerLi.eq(index).addClass("on");
+        });
+
+
+
+        /* ======================================= */
+        /*  Banner Previous/Next
+        /* ======================================= */
+        $bannerPage.click(function() {
+            change(function() {
+                if ( $(this).index() ) {
+                    index++;
+                    index%=$bannerLi.length;
+                } else {
+                    index--;
+                    if (index<0) index=$bannerLi.length-1;
+                };
+            });
+        });
+
+
+
+        /* ======================================= */
+        /*  AutoCarousel
+        /* ======================================= */
+        function auto() {
+
+            timer = setInterval(function() {
+
+                change();
+
+            }, 800);
+        };
+        auto();
+
+
+
+        /* ======================================= */
+        /*  ClearCarousel
+        /* ======================================= */
+        $('.banner').hover(function() {
+            clearInterval(timer);
+        }, function() {
+            auto();
+        })
+
+
+
+        /* ======================================= */
+        /*  BannerChange
+        /* ======================================= */
+        function change(fn) {
+            $bannerImg.eq(index).stop(false,true).fadeOut(300);
+            $bannerLi.eq(index).removeClass("on");
+
+            fn && fn();
+
+            $bannerImg.eq(index).stop(false,true).fadeIn(300);
+            $bannerLi.eq(index).addClass("on");
+        };
+
+
+    })();// End Banner
+
+
+
+</script>
+
+
+</body>
+</html>
