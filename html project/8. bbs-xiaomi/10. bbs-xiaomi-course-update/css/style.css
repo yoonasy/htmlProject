@@ -7,7 +7,7 @@
 a{text-decoration:none;}
 /*去掉li黑圆点*/
 li{list-style:none;}
-body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;}
+body{background: #f3f3f3;font-size: 12px;color:#666;font-family: arial,"Microsoft Yahei","Hiragino Sans GB",sans-serif;}
 
 /* 头部 */
 
@@ -364,24 +364,12 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
     margin-left: 60px;
     margin-top: 10px;
     border-bottom: 1px solid #e6e6e6;
-    overflow: hidden;
 }
 
-.article_text .article_title:hover {
-    color: #ff8b3d;
-}
-
-.article_text .article_title {
+.article_text .article_title{
     color: skyblue;
-    color: #444;
     font-size: 16px;
     margin-right: 6px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 524px;
-    display: inline-block;
-    vertical-align: middle;
 }
 
 .article_text .article_info{
@@ -421,7 +409,7 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
 
 .article_text img{
     vertical-align: middle;
-    margin: 3px 5px 0 0;
+    margin: -5px 5px 0 0;
 }
 
 .article_info .view_meg{
@@ -510,7 +498,6 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
 .main_r{
     float: right;
     margin-top: 10px;
-    width: 250px;
 }
 .main_r .bg{
     background: white;
@@ -521,7 +508,7 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
     font-size: 14px;
     color: #333;
     font-weight: bold;
-    width: 123px;
+    width: 124px;
     float: left;
     text-align: center;
     background: #fafafa;
@@ -541,12 +528,12 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
 }
 
 .section_list{
-    width: 248px;
+    width: 250px;
     overflow: hidden;
 }
 
 .section_list li{
-    width: 123px;
+    width: 124px;
     height: 36px;
     float: left;
     line-height: 36px;
@@ -586,7 +573,7 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
 .friendly_link_wrap .friendly_link{
     width: 990px;
     margin: 0 auto;
-    padding: 45px 0 42px 0;
+    padding: 45px 0 40px 0;
 }
 .friendly_link ul{
     overflow: hidden;
@@ -600,13 +587,13 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
 
 .friendly_link ul li a{
     display: block;
-    padding-left: 40px;
+    padding-left: 45px;
     color: #6d6d6d;
     font-size: 14px;
 }
 
 .friendly_link ul li a:last-child{
-    margin-top: 16px;
+    margin-top: 20px;
 }
 
 .friendly_link ul li a:hover{
@@ -615,6 +602,7 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
 
 .copy_right_wrap{
     background: #505050;
+    height: 80px;
     min-width: 990px;
 }
 
@@ -622,7 +610,6 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
     margin: 0 auto;
     width: 990px;
     padding: 20px 0;
-    padding-bottom: 16px;;
 }
 
 .copy_right .floor_logo{
@@ -641,20 +628,19 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
 .sign_in_btn{
     margin: 15px 0 10px 0;
     display: block;
+    width: 250px;
     height: 50px;
     background-image: url('../img/tou.png');
     background-repeat: no-repeat;
     background-color: #ff6f3d;
-    background-position: 14px center;
-    position: relative;
-    width: 249px;
+    background-position: 16px center;
 }
 
 .sign_in_btn span{
-    padding-left: 54px;
+    padding-left: 58px;
     font-size: 24px;
     color: white;
-    line-height: 51px;
+    line-height: 50px;
 }
 
 .sign_in_info{
@@ -664,30 +650,19 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
     float: right;
     margin: 2px;
     padding: 0 5px;
-    overflow: hidden;
-}
-
-.sign_in_info i {
-    font-style: normal;
-    line-height: 26px;
-    font-size: 12px;
-}
-
-.person i {
-    font-size: 14px;
 }
 
 .sign_in_info div{
-    padding-left: 30px;
+    padding-left: 36px;
     height: 23px;
     background: url('../img/tou2.jpg')no-repeat;
-    background-position: 5px 0px;
+    background-position: 9px -1px;
     color: #666;
     line-height: 23px;
 }
 
 .sign_in_info div:last-child{
-    background-position: 5px -25px;
+    background-position: 9px -25px;
     border-top: 1px solid #e6e6e6;
     height: 22px;
     line-height: 22px;
@@ -695,14 +670,14 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
 
 .hot{
     background: white;
-    padding: 19px 19px 23px 29px;
+    padding: 20px 19px 26px 29px;
     border: 1px solid #e5e5e5;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .hot h3{
     color: #333;
-    padding-bottom: 8px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #e6e6e6;
 }
 
@@ -714,25 +689,25 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
 }
 
 .hot_c p{
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 .rom{
-    margin-top: 15px;
+    margin-top: 16px;
     background: white;
-    padding: 19px 19px 25px 29px;
+    padding: 20px 19px 20px 29px;
     border: 1px solid #e5e5e5;
     text-align: center;
 }
 
 .rom a{
-    color: #8C8C8C;
+    color: #777;
 }
 
 .rom h3{
     text-align: left;
     color: #333;
-    padding-bottom: 8px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #e5e5e5;
 }
 
@@ -740,20 +715,11 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
     float: right;
     color: #333;
     font-weight: 400;
-    line-height: 20px;
 }
 
 .rom .rom_info{
     display: block;
-    margin-top: 33px;
-}
-
-.rom_info span:nth-child(1) span {
-    font-size: 16px;
-}
-
-.rom_info p:nth-child(3) {
-    margin-top: 4px;
+    margin-top: 36px;
 }
 
 .rom_info span{
@@ -761,7 +727,7 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
 }
 
 .rom_info span strong{
-    font-size: 36px;
+    font-size: 34px;
 }
 
 .rom_info p{
@@ -769,28 +735,24 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
 }
 
 .rom_info_text{
-    margin-top: 12px;
+    margin-top: 20px;
 }
 
 .rom .rom_update{
     width: 190px;
     height: 38px;
+    background: #ff7519;
     display: block;
     margin: 0 auto;
     color: white;
     line-height: 38px;
-    font-size: 14px;
-    margin-top: 21px;
-    margin-bottom: 18px;
-    background: #ff8b3d;
-}
-
-.rom .rom_update:hover {
-    background: #ff7519;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 20px;
 }
 
 .rom_link{
-    margin-top: 6px;
+    margin-top: 10px;
 }
 
     /* ==================================== */
@@ -799,7 +761,7 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
     .download_app {
         background: #FFF;
         border: 1px solid #e5e5e5;
-        padding: 19px 19px 45px 29px;
+        padding: 18px 19px 50px 29px;
         margin-top: 15px;
     }
     .download_app h3 {
@@ -810,6 +772,7 @@ body{background: #f3f3f3;font-size: 12px;color:#333;font-family: arial,"Microsof
     .download_qr_code {
         margin: 0 auto;
         margin-top: 20px;
+        text-align: center;
     }
 
 
