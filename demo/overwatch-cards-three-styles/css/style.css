@@ -1,0 +1,145 @@
+html, body, .wrapper {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, p {
+  margin: 0;
+  cursor: default;
+}
+
+h1, h2 {
+  font-family: "Days One", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  position: relative;
+  overflow: hidden;
+}
+.wrapper > img {
+  z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-filter: blur(7px);
+          filter: blur(7px);
+}
+
+.card {
+  z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  height: 450px;
+  width: 300px;
+  margin: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  opacity: 1;
+  -webkit-transform: translate(0) rotate3d(0) scale(1);
+          transform: translate(0) rotate3d(0) scale(1);
+  -webkit-transition: opacity 300ms ease-out, -webkit-transform 300ms ease-out;
+  transition: opacity 300ms ease-out, -webkit-transform 300ms ease-out;
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+  transition: opacity 300ms ease-out, transform 300ms ease-out, -webkit-transform 300ms ease-out;
+}
+.card:hover {
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
+}
+.card:nth-of-type(1) {
+  background: url(https://i.ytimg.com/vi/ctOvQkdb7KE/maxresdefault.jpg) no-repeat center/cover;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.card:nth-of-type(2) {
+  background: url(https://i.ytimg.com/vi/NIfSNYXWAiI/maxresdefault.jpg) no-repeat center/cover;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.card:nth-of-type(3) {
+  background: url(http://orig15.deviantart.net/b6af/f/2016/244/e/b/reaper_by_ninovecia-dag3qj0.jpg) no-repeat center/cover;
+}
+.card:nth-of-type(3) .card--top {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.card.animate {
+  opacity: 0;
+  -webkit-transform: translateX(-110px) rotate3d(0, 1, 0, 45deg);
+          transform: translateX(-110px) rotate3d(0, 1, 0, 45deg);
+}
+.card.animate:nth-of-type(2n) {
+  -webkit-transform: translateX(-110px) rotate3d(0, 1, 0, -45deg);
+          transform: translateX(-110px) rotate3d(0, 1, 0, -45deg);
+}
+.card--top, .card--bottom {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+}
+.card--top h1, .card--top h2, .card--bottom h1, .card--bottom h2 {
+  text-transform: uppercase;
+  font-style: italic;
+}
+.card--top {
+  color: #fff;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.75), transparent);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.card--bottom {
+  height: 150px;
+  background-color: #fff;
+  color: #331a4d;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}

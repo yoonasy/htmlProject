@@ -1,0 +1,42 @@
+* {
+  background-color: black;
+}
+
+p {
+  font-size: 10.2vw;
+  text-transform: uppercase;
+  font-family: 'Nosifer', cursive;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 61.2vh;
+}
+
+#title1:hover {
+  color: white;
+  text-shadow: 0 0 30px blue;
+}
+
+#title2:hover {
+  color: white;
+  text-shadow: 0 0 30px red;
+}
+
+#title3:hover {
+  color: white;
+  text-shadow: 0 0 30px orange;
+}
+
+#title4:hover {
+  color: white;
+  text-shadow: 0 0 30px cyan;
+}
+
+#title5:hover {
+  color: white;
+  text-shadow: 0 0 30px lime;
+}
+
+#title6:hover {
+  color: white;
+  text-shadow: 0 0 30px yellow;
+}

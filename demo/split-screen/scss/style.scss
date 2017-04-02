@@ -1,0 +1,264 @@
+$green-1: #91c488;
+$black-fade:rgba(0, 0, 0, 0.38);
+$bg-image: url('http://danbdesigns.co.uk/architecture.jpg');
+img {
+	width:100%;
+}
+.book-modal {
+	// taken some css from Bootstrap for modal
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1050;
+	display: none;
+	overflow: hidden;
+	background: darken($black-fade, 9%);
+	.modal-container {
+		max-width: 600px;
+    margin: 30px auto;
+		position: relative;
+		
+		padding:20px;
+		.header {
+			padding:20px;
+			background:$green-1;
+			.title {
+				padding-right:50px;
+				h1 {
+					color: white;
+				}
+			}
+			.close {
+				height:auto;
+				width:auto;
+				padding:10px 20px;
+				position:absolute;
+				top:20px;
+				right:20px;
+				background: darken($green-1, 4%);
+				font-size:40px;
+				color:lighten($green-1, 3%);
+				float:right;
+				text-align:center;
+				transition: .6s all;
+				cursor: pointer;
+				&:hover {
+					background:darken($green-1, 6%);
+					color:lighten($green-1, 6%);
+				}
+			}
+		}
+		.content {
+			padding:20px;
+			background:white;
+		}
+	}
+}
+.book-bar {
+	width: 200px;
+	min-height: 50px;
+	position: fixed;
+	background: darken($green-1, 9%);
+	display: block;
+	z-index: 1000;
+	padding: 10px 10px;
+	bottom: 0;
+	text-align: center;
+	opacity: 0.8;
+	transition: 0.5s all;
+	cursor: pointer;
+	&:hover {
+		min-height: 60px;
+		.cta {
+			color: white;
+		}
+	}
+	.cta {
+		//text-shadow: 0px 1px 4px #000;
+		font-size: 30px;
+		color: lighten($green-1, 24%);
+		transition: 0.5s all;
+	}
+}
+.p-section {
+	display: none;
+	&.active {
+		display: block;
+	}
+}
+.main-nav {
+	ul {
+		li {
+			transition: 0.5 all;
+			&:hover {
+				//font-size: 30px;
+				background: rgba(74, 90, 98, 0.7);
+			}
+		}
+	}
+}
+.right-content {
+	ul {
+		li {
+			background:$green-1;
+			margin: 10px 0px;
+			padding: 10px;
+			max-width:100%;
+			color:white;
+			font-size:22px;
+			text-align:center;
+		}
+	}
+}
+
+/******************************
+* Below css needs a revamp 
+* This is a project I am 
+	improving from a while ago
+******************************/
+*, :before, :after {
+	box-sizing: border-box;
+}
+html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;background:white;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+body {
+	
+}
+.active {
+	display: block;
+}
+.on {
+	display: block!important;
+}
+.content-whats-on {
+	display: none;
+}
+.content-prices {
+	display: none;
+}
+.content-opening-times {
+	display: none;
+}
+.content-location {
+	display: none;
+}
+section {
+	margin:0;
+	padding:0;
+	top:-40px;
+	position: inline-block;
+}
+.wrap {
+	margin: 0 auto;
+}
+p {
+	margin:10px 0 10px 0;
+}
+h1 {
+	font-size: 2em;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	margin: 6px 0 6px 0;
+	color: $green-1;
+}
+
+.content-location img {
+	width:90%;
+	overflow: hidden;
+}
+
+.outer-overlay {
+	background: rgba(182, 255, 169, 0.70);
+	height: 100%;
+}
+.main-nav {
+	width:100%;
+	padding: 6%;
+ul {
+	font-size:3em;
+	font-family: sans-serif;
+	font-weight: 700;
+	text-align: center;
+	height:auto;
+	line-height: 50px;
+	li {
+	list-style: none;
+	padding: 3px;
+	text-transform: uppercase;
+		color: #ffffff;
+		cursor: pointer;
+	}
+}
+}
+// new neat styles below
+body {
+	//overflow-y: scroll;
+}
+.main-nav {
+	ul {
+		
+	} 
+}
+.left-content {
+	width: 50%;
+	float:left;
+	background: $bg-image no-repeat center center #b6ffa9;
+	background-size: cover;
+	height: 100%;
+}
+.right-content {
+	overflow-y: scroll;
+	float: right;
+	height: 100%;
+	width: 50%;
+	padding: 30px;
+	box-shadow: -1px 0px 17px 1px rgba(0, 0, 0, 0.52);
+	p {
+		font-size: 20px;
+		color: #2f2f2f;
+		line-height: 1.2;
+	}
+}
+// all media styles - not mobile first at the moment
+@media (max-width: 700px){
+	.left-content {
+		width: 100%;
+		height:auto;
+		min-height:100px;
+	}
+	.right-content {
+		overflow-y: hidden;
+		float: right;
+		height: auto;
+		width: 100%;
+		padding: 30px;
+	}
+	.main-nav {
+		ul {
+			font-size: 2em;
+		} 
+	}
+}
+@media (max-width: 991px){
+	.main-nav {
+		ul {
+			font-size: 2.3em;
+		} 
+	}
+}
+
+// my credit :)
+.danbdesigns {
+	position:fixed;
+	bottom: 0px;
+	right:0px;
+	width:100px;
+	height:30px;
+	background:$green-1
+}

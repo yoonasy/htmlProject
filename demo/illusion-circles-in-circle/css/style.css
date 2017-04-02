@@ -1,0 +1,313 @@
+.illusion-ctnr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  border-radius: 1000px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  background-image: -webkit-radial-gradient(circle, #000031, #000022);
+  background-image: radial-gradient(circle, #000031, #000022);
+}
+@media (min-width: 21.25em) {
+  .illusion-ctnr {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media (min-width: 33.75em) {
+  .illusion-ctnr {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+[class*=wrapper] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 1000px;
+  position: absolute;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+[class*=wrapper]:before {
+  display: block;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.6);
+  height: 0;
+  content: "";
+  position: absolute;
+  -webkit-transition: .3s;
+  transition: .3s;
+  opacity: 0;
+}
+
+.tracks {
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+}
+.tracks:before {
+  opacity: 1;
+  height: 100%;
+}
+
+[class*=circle] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6em;
+  width: 5%;
+  height: 5%;
+  -webkit-animation: movement 2s infinite ease-in-out alternate;
+          animation: movement 2s infinite ease-in-out alternate;
+  border-radius: 1000px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #E28413;
+}
+
+.wrapper-1 {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.wrapper-1 .circle {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.wrapper-2 {
+  -webkit-transform: rotate(22.5deg);
+          transform: rotate(22.5deg);
+}
+.wrapper-2 .circle {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.wrapper-3 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.wrapper-3 .circle {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.wrapper-4 {
+  -webkit-transform: rotate(67.5deg);
+          transform: rotate(67.5deg);
+}
+.wrapper-4 .circle {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.wrapper-5 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.wrapper-5 .circle {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.wrapper-6 {
+  -webkit-transform: rotate(112.5deg);
+          transform: rotate(112.5deg);
+}
+.wrapper-6 .circle {
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+
+.wrapper-7 {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+.wrapper-7 .circle {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.wrapper-8 {
+  -webkit-transform: rotate(157.5deg);
+          transform: rotate(157.5deg);
+}
+.wrapper-8 .circle {
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+}
+
+.description {
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.description p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ffa6bc;
+}
+.description p:first-of-type {
+  margin: 0 0 10px;
+  font-size: 45px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  min-width: 300px;
+  height: 70px;
+  margin: 30px auto 0;
+  padding: 20px 0;
+  border-radius: 1000px;
+  border: rgba(255, 255, 255, 0.4) 2px solid;
+  outline: none;
+  color: white;
+  font: 21px 'Comfortaa', cursive;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.btn:before {
+  display: block;
+  width: 0;
+  border-radius: 100%;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.2);
+}
+@media (min-width: 37.5em) {
+  .btn:focus, .btn:active {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .btn:hover:before, .btn:focus:before {
+    width: 120%;
+    padding-top: 120%;
+    -webkit-transition: width .2s ease-out, padding-top .2s ease-out;
+    transition: width .2s ease-out, padding-top .2s ease-out;
+  }
+  .btn:active:before {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.btn-2 {
+  font-size: 30px;
+  line-height: 0;
+}
+.btn-2 span.wait-what {
+  font-size: 50px;
+  position: relative;
+  top: 5px;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.btn-smiley {
+  width: auto;
+  height: auto;
+  min-width: 0;
+  margin: 10px auto 0;
+  padding: 10px;
+  border: none;
+  font-size: 11px;
+}
+
+small {
+  display: block;
+  margin: 20px;
+  padding-bottom: 30px;
+  color: #ffa6bc;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.more-illusions-ctnr {
+  width: 100%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 50px;
+  padding: 0 50px;
+  text-align: center;
+}
+.more-illusions-ctnr a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #E28413;
+}
+.more-illusions-ctnr a:hover,
+.more-illusions-ctnr a:active,
+.more-illusions-ctnr a:focus {
+  text-decoration: none;
+}
+
+@-webkit-keyframes movement {
+  to {
+    top: calc(100% - 5%);
+  }
+}
+
+@keyframes movement {
+  to {
+    top: calc(100% - 5%);
+  }
+}
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 20px 10px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-family: 'Comfortaa', cursive;
+  line-height: 1;
+  background-image: -webkit-radial-gradient(circle, #bf002f, #8c0022);
+  background-image: radial-gradient(circle, #bf002f, #8c0022);
+}
+
+h1 {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: rgba(255, 255, 255, 0.4) 1px solid;
+  text-align: center;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  font: calc(4vw + 2em)/1 "Modak", cursive;
+}

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900');
+$brand-primary: linear-gradient(100deg, #560a9b, #9e158f);
+$brand-secondary: linear-gradient(100deg, #003f77, #05c4b5);
+$bezier: cubic-bezier(.19,1,.22,1);
+$border-radius: 8px;
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.btn-animate {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 16px 47px -15px rgb(89, 11, 155);
+  background: none;
+  transition: all .2s $bezier;
+  border-radius: $border-radius;
+  overflow: hidden;
+  outline: none;
+  transform: translateZ(0);
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:before,
+  &:after {
+    border-radius: $border-radius;
+    content: '';
+    z-index: -1;
+    background: $brand-primary;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+  }
+
+  &:after {
+    background: $brand-secondary;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .5s $bezier;
+    transition-delay: .1s;
+  }
+
+  &:hover {
+    box-shadow: 0px 16px 47px -15px #003f77;
+
+    &:after {
+      transform: scaleY(1);
+      transform-origin: bottom;
+      transition-delay: 0s;
+    }
+  }
+  
+  &:active {
+    transform: translateY(4px) translateZ(0);
+    box-shadow: 0px 8px 10px -6px #003f77;
+  }
+}

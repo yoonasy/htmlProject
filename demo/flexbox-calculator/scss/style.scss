@@ -1,0 +1,121 @@
+$bg: #26547c;
+$button: $bg;
+$eval: #06d6a0;
+$op: #ffd166;
+$calculator: #ef476f;
+$radius: 10px;
+$display: $bg;
+$font: 'Roboto Condensed';
+$font-color: #fcfcfc;
+
+@mixin shadow($color) {
+  box-shadow: 0 4px 1px darken($color, 15%);
+}
+
+body, html {
+  height: 100%;
+  background-color: $bg;
+  font-family: $font;
+  font-size: 24px;
+}
+
+button {
+  border: 0;
+  color: $font-color;
+  outline: 0;
+  transition: transform .1s ease;
+
+  &:active {
+    transform: translateY(5px);
+  }
+}
+
+.tag {
+  a {
+    bottom: 1px;
+    color: $font-color;
+    font-size: 18px;
+    position: absolute;
+    right: 5px;
+    text-decoration: none;
+    
+    &:visited {
+      color: $font-color;
+      text-decoration: none;
+    }
+  }
+}
+
+.center {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  background-color: $calculator;
+  border-radius: $radius;
+  box-shadow: 0 8px darken($calculator, 10%);
+  height: 355px;
+  min-width: 390px;
+}
+
+.top-bar {
+  display: flex;
+  width: 100%;
+
+  button {
+    @include shadow(darken($op, 15%));
+    background: $op;
+    border-radius: $radius;
+    color: darken($font-color, 50%);
+    flex: .9;
+    font-size: 22px;
+    height: 48px;
+    line-height: 48px;
+    margin: 10px;
+  }
+
+  div {
+    background: $display;
+    border-radius: $radius;
+    box-shadow: inset 0 4px 5px darken($calculator, 30%);
+    color: $font-color;
+    flex: 4;
+    font-size: 28px;
+    height: 26px;
+    margin: 10px;
+    padding: 12px;
+    text-align: right;
+  }
+}
+
+.keys {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 290px;
+
+  button {
+    @include shadow($button);
+    background: $button;
+    border-radius: $radius;
+    height: 50px;
+    line-height: 48px;
+    margin: 9px;
+    width: 75px;
+
+    &.op {
+      @include shadow(darken($op, 15%));
+      background: $op;
+      color: darken($font-color, 50%);
+      line-height: 45px;
+    }
+
+    &.equals {
+      @include shadow($eval);
+      background: $eval;
+      color: darken($font-color, 50%);
+    }
+  }
+}

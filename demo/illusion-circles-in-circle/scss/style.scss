@@ -1,0 +1,263 @@
+// Color Variables - only for styling
+$primary: #002;
+$secondary: #BF002F;
+$accent: #E28413;
+    
+.illusion-ctnr {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 1000px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px 5px rgba(black,.2);
+    background-image: radial-gradient(circle, lighten($primary,3), $primary);
+    //original animated GIF
+    //background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9988/illusion-circles.gif) 0 0 / contain no-repeat;
+    
+    //On large screens make the circle bigger
+    @media (min-width: (340/16)+em) {
+        width: 350px;
+        height: 350px;
+    }
+     @media (min-width: (540/16)+em) {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+[class*=wrapper] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 1000px;
+    position: absolute;
+    transform-origin: 50% 50%;    
+    &:before {
+        display: block;
+        width: 1px;
+        background: rgba(white,.6);
+        height: 0;
+        content: "";
+        position: absolute;
+        transition: .3s;
+        opacity: 0;
+    }
+}
+.tracks {
+    box-shadow: inset 0 0 5px rgba(white,.1);
+    &:before {
+        opacity: 1; 
+        height: 100%;
+    }
+}
+
+$speed: 2;
+[class*=circle] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    width: 5%;
+    height: 5%; 
+    animation: movement $speed+s infinite ease-in-out alternate;    
+    border-radius: 1000px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+    background: $accent;
+}
+
+.wrapper-1 {
+    transform: rotate(0deg);
+    .circle {    
+        animation-delay: 0s; // I don't have to declare this, but I did it for easier reference
+    }
+}
+.wrapper-2 {
+    transform: rotate(22.5deg);
+    .circle {        
+        //animation-delay: .25s;
+        animation-delay: $speed*.125+s;
+    }
+}
+.wrapper-3 {
+    transform: rotate(45deg);
+    .circle {        
+        //animation-delay: .5s;
+        animation-delay: $speed*.25+s;
+    }
+}
+.wrapper-4 {
+    transform: rotate(67.5deg);
+    .circle {        
+        //animation-delay: .75s;
+        animation-delay: $speed*.375+s;
+    }
+}
+.wrapper-5 {
+    transform: rotate(90deg);
+    .circle {        
+        //animation-delay: 1s;
+        animation-delay: $speed*.5+s;
+    }
+}
+.wrapper-6 {
+    transform: rotate(112.5deg);
+    .circle {        
+        //animation-delay: 1.25s;
+        animation-delay: $speed*.625+s;
+    }
+}
+.wrapper-7 {
+    transform: rotate(135deg);
+    .circle {        
+        //animation-delay: 1.50s;
+        animation-delay: $speed*.75+s;
+    }
+}
+.wrapper-8 {
+    transform: rotate(157.5deg);
+    .circle {        
+        //animation-delay: 1.75s;
+        animation-delay: $speed*.875+s;
+    }
+}
+
+.description {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+        color: lighten($secondary,45);
+    }
+    p:first-of-type {
+        margin: 0 0 10px;
+        font-size: 45px;
+    }
+}
+
+//Buttons used to toggle the lines
+.btn {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    min-width: 300px;
+    height: 70px;
+    margin: 30px auto 0;
+    padding: 20px 0;
+    border-radius: 1000px;
+    border: rgba(white,.4) 2px solid;
+    outline: none;
+    color: white;
+    font: 21px 'Comfortaa', cursive;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background: none;
+    transition: .3s;
+    &:before {
+        display: block;
+        width: 0;
+        border-radius: 100%;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(white, .2);
+    }
+    @media (min-width: (600/16)+em) {
+        &:focus,
+        &:active { border-color: rgba(white, .6); }
+        &:hover:before,
+        &:focus:before {
+            width: 120%;
+            padding-top: 120%;
+            transition: width .2s ease-out, padding-top .2s ease-out;
+        }
+        &:active:before { background: rgba(white, .4); }
+    }
+    
+}
+.btn-2 {
+    font-size: 30px;
+    line-height: 0;
+    span {        
+        &.wait-what {
+            font-size: 50px;
+            position: relative;
+            top: 5px;
+            transition: .2s ease-out;
+        }
+    }
+}
+.btn-smiley {
+    width: auto;
+    height: auto;
+    min-width: 0;
+    margin: 10px auto 0;
+    padding: 10px;
+    border: none;
+    font-size: 11px;
+}
+small {
+    display: block;
+    margin: 20px;
+    padding-bottom: 30px;
+    color: lighten($secondary,45);
+    text-align: center;
+    line-height: 1.5;
+}
+
+.more-illusions-ctnr {
+    width: 100%;
+    align-self: flex-end;
+    margin-bottom: 50px;
+    padding: 0 50px;
+    text-align: center;
+    a {
+        display: inline-block;
+        padding: 10px 20px;
+        color: $accent;
+    }
+    a:hover,
+    a:active,
+    a:focus {
+        text-decoration: none;
+    }
+}
+
+//Animate the circles
+@keyframes movement {
+    to { top: calc(100% - 5%); }
+}
+
+//Styling stuff
+*, *:after, *:before { box-sizing: border-box; }
+html, body { height: 100vh; }
+body {
+    margin: 0;
+    padding: 20px 10px 0;
+    align-items: center;    
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    line-height: 1;
+    background-image: radial-gradient(circle, $secondary, darken($secondary,10));
+}
+h1 {
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: rgba(white,.4) 1px solid;
+    text-align: center;
+    text-shadow: 0 3px 3px rgba(black,.3);
+    font: calc(4vw + 2em)/1 'Modak', cursive;
+}
+

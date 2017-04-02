@@ -1,0 +1,317 @@
+img {
+  width: 100%;
+}
+
+.book-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.38);
+}
+.book-modal .modal-container {
+  max-width: 600px;
+  margin: 30px auto;
+  position: relative;
+  padding: 20px;
+}
+.book-modal .modal-container .header {
+  padding: 20px;
+  background: #91c488;
+}
+.book-modal .modal-container .header .title {
+  padding-right: 50px;
+}
+.book-modal .modal-container .header .title h1 {
+  color: white;
+}
+.book-modal .modal-container .header .close {
+  height: auto;
+  width: auto;
+  padding: 10px 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #84bd7a;
+  font-size: 40px;
+  color: #9ac992;
+  float: right;
+  text-align: center;
+  -webkit-transition: .6s all;
+  transition: .6s all;
+  cursor: pointer;
+}
+.book-modal .modal-container .header .close:hover {
+  background: #7eba74;
+  color: #a4ce9c;
+}
+.book-modal .modal-container .content {
+  padding: 20px;
+  background: white;
+}
+
+.book-bar {
+  width: 200px;
+  min-height: 50px;
+  position: fixed;
+  background: #75b569;
+  display: block;
+  z-index: 1000;
+  padding: 10px 10px;
+  bottom: 0;
+  text-align: center;
+  opacity: 0.8;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+.book-bar:hover {
+  min-height: 60px;
+}
+.book-bar:hover .cta {
+  color: white;
+}
+.book-bar .cta {
+  font-size: 30px;
+  color: #ddedda;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.p-section {
+  display: none;
+}
+.p-section.active {
+  display: block;
+}
+
+.main-nav ul li {
+  -webkit-transition: 0.5 all;
+  transition: 0.5 all;
+}
+.main-nav ul li:hover {
+  background: rgba(74, 90, 98, 0.7);
+}
+
+.right-content ul li {
+  background: #91c488;
+  margin: 10px 0px;
+  padding: 10px;
+  max-width: 100%;
+  color: white;
+  font-size: 22px;
+  text-align: center;
+}
+
+/******************************
+* Below css needs a revamp 
+* This is a project I am 
+	improving from a while ago
+******************************/
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, label, legend, p, blockquote, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+:focus {
+  outline: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+abbr, acronym {
+  border: 0;
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.active {
+  display: block;
+}
+
+.on {
+  display: block !important;
+}
+
+.content-whats-on {
+  display: none;
+}
+
+.content-prices {
+  display: none;
+}
+
+.content-opening-times {
+  display: none;
+}
+
+.content-location {
+  display: none;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+  top: -40px;
+  position: inline-block;
+}
+
+.wrap {
+  margin: 0 auto;
+}
+
+p {
+  margin: 10px 0 10px 0;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  margin: 6px 0 6px 0;
+  color: #91c488;
+}
+
+.content-location img {
+  width: 90%;
+  overflow: hidden;
+}
+
+.outer-overlay {
+  background: rgba(182, 255, 169, 0.7);
+  height: 100%;
+}
+
+.main-nav {
+  width: 100%;
+  padding: 6%;
+}
+.main-nav ul {
+  font-size: 3em;
+  font-family: sans-serif;
+  font-weight: 700;
+  text-align: center;
+  height: auto;
+  line-height: 50px;
+}
+.main-nav ul li {
+  list-style: none;
+  padding: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.left-content {
+  width: 50%;
+  float: left;
+  background: url("http://danbdesigns.co.uk/architecture.jpg") no-repeat center center #b6ffa9;
+  background-size: cover;
+  height: 100%;
+}
+
+.right-content {
+  overflow-y: scroll;
+  float: right;
+  height: 100%;
+  width: 50%;
+  padding: 30px;
+  box-shadow: -1px 0px 17px 1px rgba(0, 0, 0, 0.52);
+}
+.right-content p {
+  font-size: 20px;
+  color: #2f2f2f;
+  line-height: 1.2;
+}
+
+@media (max-width: 700px) {
+  .left-content {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+  }
+
+  .right-content {
+    overflow-y: hidden;
+    float: right;
+    height: auto;
+    width: 100%;
+    padding: 30px;
+  }
+
+  .main-nav ul {
+    font-size: 2em;
+  }
+}
+@media (max-width: 991px) {
+  .main-nav ul {
+    font-size: 2.3em;
+  }
+}
+.danbdesigns {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 100px;
+  height: 30px;
+  background: #91c488;
+}

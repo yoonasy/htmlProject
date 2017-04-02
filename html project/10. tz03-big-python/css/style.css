@@ -1525,8 +1525,15 @@ body{color: #333;font-size: 12px;font-family: "Microsoft Yahei";}
 
 
 /* 版块十二 - Do you want to be an engineer */
+.sec12_engineer{
+	background: url('../img/timg.jpg');
+	height: 990px;
+	overflow: hidden;
+	min-width: 1100px;
+}
+
 .sec12_title{
-	margin: 60px 0 0 0;
+	margin: 200px 0 0 0;
 	color: white;
 }
 
@@ -1581,12 +1588,6 @@ body{color: #333;font-size: 12px;font-family: "Microsoft Yahei";}
 	line-height: 36px;
 }
 
-.sec12_engineer{
-	background: url('../img/timg.jpg');
-	height: 600px;
-	overflow: hidden;
-	min-width: 1100px;
-}
 
 
 /* fllor底部版权 */

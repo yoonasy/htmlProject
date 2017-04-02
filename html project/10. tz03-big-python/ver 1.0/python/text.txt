@@ -1,0 +1,26 @@
+三天掌握知乎web问答平台开发Python核心技术直播课
+
+主讲：强子老师
+Python学院创始人
+Python学院院长
+Python学院金牌讲师
+
+
+8年Python开发经验，曾任职豆瓣Web平台开发，擅长web开发、爬虫数据可视化、django框架、Python socket编程等。Python开发及开源爱好者，vim控，熟悉Django，redis，docker等。先后在多个项目中成功实施数据可视化，熟悉Matlab/iGraph/d3/neo4j等可视化工具。
+
+Course Introlduction
+课程介绍
+
+3月30日   第一天
+            Flask项目创建
+            Flask视图创建
+            装饰器的理解和使用
+          第二天
+            视图业务实现
+            Jinja2模板渲染及语法
+            session及权限验证
+          第三天
+            ORM模型(sqlalchemy)详解
+            flask-migrate模型迁移
+            flask-wtf(CSRF)表单验证
+            flask-script脚本编写

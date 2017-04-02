@@ -1,0 +1,49 @@
+color1 = #8AAAFF
+color2 = #FA8CFF
+
+linear_gradient(deg, origin, colors)
+  background-image: -webkit-linear-gradient(deg, origin, colors) // Chrome, Safari
+  background-image:    -moz-linear-gradient(deg, origin, colors) // Firefox (3.6 - 15)
+  background-image:     -ms-linear-gradient(deg, origin, colors) // IE 10
+  background-image:      -o-linear-gradient(deg, origin, colors) // Opera (11.1 - 12.0)
+  background-image:         linear-gradient(deg, origin, colors) // W3C
+
+
+*
+   box-sizing: border-box
+
+body
+   margin: 0
+   padding: (@margin)
+   font-family: 'Raleway', sans-serif
+   font-size: 16px
+   width: 100%
+   height: 100vh
+   display: flex
+   justify-content: center
+   align-items: center
+   
+#loader
+  width: 550px
+
+.percent-count
+   display: flex
+   justify-content: center
+   padding: 2rem 0
+   font-family: 'Raleway', sans-serif
+   font-size: 2.5rem
+   color: color1
+
+.progress-bar
+   background: #E6EEFF
+   width: 500px
+   height: 10px
+   border-radius: 50px
+   margin: auto
+   overflow: hidden
+
+   .progress
+      linear_gradient(90deg, color1, color2)
+      width: 3px
+      height: 10px
+      border-radius: 5px

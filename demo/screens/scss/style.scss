@@ -1,0 +1,209 @@
+/**
+ * @file
+ * Styling.
+ */
+@import "compass";
+
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+* {
+  @include box-sizing(border-box);
+}
+
+#screen-toggle {
+  background-color: rgba(0, 0, 0, 0.7);
+  user-select: none;
+  position: fixed;
+  border: 1px solid #0bcdff;
+  border-radius: 8px;
+  color: #0bcdff;
+  cursor: pointer;
+  clear: both;
+  display: block;
+  font-size: 150%;
+  left: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  top: 20px;
+  transition: all 500ms linear;
+  width: auto;
+  z-index: 5;
+  
+  &::after {
+    background-color: rgba(255,255,255,0.4);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: none;
+    width: 0;
+  }
+  
+  &:hover {
+    background-color: rgba(0, 130, 164, 0.8);
+    box-shadow: 0 0 10px 0 #0bcdff;
+    color: #fff;
+    text-decoration: none;
+    &::after {
+      background-color: rgba(255, 255, 255, 0);
+      transition: all 300ms ease-out;
+      width: 100%;
+    }
+  }
+}
+
+#screen-selector {
+  background-color: #0f0;
+  border: 1px solid #0bcdff;
+  height: calc(60vh + 2px);
+  max-height: calc(100vw - 40px);
+  max-width: 200px;
+  min-height: 282px;
+  min-width: 122px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  width: calc(20vw + 2px);
+  z-index: 5;
+}
+
+.selector {
+  background-color: #000;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-bottom: 1px dashed #0bcdff;
+  cursor: pointer;
+  height: 25%;
+  max-height: calc(25vw - 2px);
+  min-height: 70px;
+  position: relative;
+  width: 100%;
+  
+  @include transition(filter 0.4s linear);
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  
+  &:hover {
+    @include filter(sepia(100%));
+  }
+}
+
+.screen-wrapper {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+}
+
+.separater {
+  background-color: #999999;
+  @include filter-gradient(#666, #e5e5e5, vertical); // IE6-9
+  @include background-image(linear-gradient(top, #666 0%,#a6a6a6 8%,#a6a6a6 22%,#7f7f7f 26%,#b5b5b5 88%, #555 100%));
+
+  height: 40px;
+  width: 100%;
+}
+
+.screen {
+  background-position: center center;
+  display: block;
+  min-height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.image {
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+#screen-wrapper-1 {
+  .screen {
+    @include background-image(linear-gradient(
+      to bottom, 
+      rgba(255,255,255,0), 
+      rgba(255,255,255,0) 50%, 
+      rgba(0,0,0,0.2) 70%, 
+      rgba(0,0,0,0.6)
+    ));
+    background-size: 100% .5vh;
+  }
+  
+  .image {
+    background-image: url('http://bryanjones.us/sites/default/files/space/space.jpg');
+  }
+}
+
+#screen-selector-1 {
+  background-image: url('http://bryanjones.us/sites/default/files/space/space.jpg'); 
+}
+
+#screen-wrapper-2 {
+  .screen {
+    background: linear-gradient(315deg, transparent 75%, rgba(255,255,255,0) 0) -5px 0,
+    linear-gradient(45deg, transparent 95%, rgba(0,0,0,0.2) 0) -5px 0,
+    linear-gradient(135deg, rgba(0,0,0,0.1) 50%, rgba(255,255,255,0) 0) 0 0,
+    linear-gradient(45deg, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 0) 0 0 rgba(0,0,0,0.2);
+    background-size: 10px 10px;
+  }
+  
+  .image {
+    background-image: url("http://bryanjones.us/sites/default/files/subway3.jpg");
+  }
+}
+
+#screen-selector-2 {
+  background-image: url('http://bryanjones.us/sites/default/files/subway3.jpg');
+}
+
+#screen-wrapper-3 {
+  .screen {
+    background-image: 
+      linear-gradient(45deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 25%, rgba(0, 0, 0, 0.2) 75%, rgba(0, 0, 0, 0.5)  75%), 
+      linear-gradient(45deg, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 25%, rgba(0, 0, 0, 0.2) 75%, rgba(0, 0, 0, 0.5) 75%);
+    background-size: 4px 2px, 4px 2px, 100% 100%;    
+    background-position: 0px 0px, 2px 2px, 0px 0px;
+  }
+  
+  .image {
+    background-image: url("http://bryanjones.us/sites/default/files/Whiskey3.png");
+  }
+}
+
+#screen-selector-3 {
+  background-image: url('http://bryanjones.us/sites/default/files/Whiskey3.png');
+}
+
+#screen-wrapper-4 {
+  .screen {
+    @include background-image(repeating-radial-gradient(
+      circle,
+      rgba(255,255,255,0) 10px, 
+      rgba(255,255,255,0) 10px, 
+      rgba(0,0,0,0.2) 20px, 
+      rgba(0,0,0,0.6) 20px
+    ));
+    background-size: 0.8em 0.8em;
+  }
+  
+  .image {
+    background-image: url("http://bryanjones.us/sites/default/files/corridor2.png");
+  }
+}
+
+#screen-selector-4 {
+  background-image: url('http://bryanjones.us/sites/default/files/corridor2.png');
+}

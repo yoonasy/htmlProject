@@ -1,0 +1,86 @@
+body, html {
+  height: 100%;
+  background: #F6F4EE;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background: red;
+  border-radius: 50%;
+  offset-path: path("M0,0a72.5,72.5 0 1,0 145,0a72.5,72.5 0 1,0 -145,0");
+  offset-rotate: 0deg;
+  position: relative;
+  transform: scale(1.5);
+}
+
+.circle-1 {
+  width: 30px;
+  height: 30px;
+  background: #814AB1;
+}
+
+.circle-2 {
+  width: 25px;
+  height: 25px;
+  background: #4CBDC9;
+  left: -30px;
+}
+
+.circle-3 {
+  width: 20px;
+  height: 20px;
+  background: #FFCE24;
+  left: -55px;
+}
+
+.circle-4 {
+  width: 15px;
+  height: 15px;
+  background: #FF2D74;
+  left: -75px;
+}
+
+.circle-1 {
+  animation: load 1.8s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+  animation-delay: 0.147s;
+  animation-fill-mode: forwards;
+  z-index: 99;
+}
+
+.circle-2 {
+  animation: load 1.8s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+  animation-delay: 0.294s;
+  animation-fill-mode: forwards;
+  z-index: 98;
+}
+
+.circle-3 {
+  animation: load 1.8s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+  animation-delay: 0.441s;
+  animation-fill-mode: forwards;
+  z-index: 97;
+}
+
+.circle-4 {
+  animation: load 1.8s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+  animation-delay: 0.588s;
+  animation-fill-mode: forwards;
+  z-index: 96;
+}
+
+@keyframes load {
+  from {
+    offset-distance: 0;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}

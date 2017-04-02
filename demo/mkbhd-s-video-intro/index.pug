@@ -1,0 +1,59 @@
+audio(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/128337/ongoing-thing-crop.ogg' controls autoplay)
+
+.card
+  img(src='https://yt3.ggpht.com/-lNGwllze1Xk/AAAAAAAAAAI/AAAAAAAAAAA/N6QnsHGN7Fk/s100-c-k-no-mo-rj-c0xffffff/photo.jpg', alt="Marques Brownlee")
+  h1.name
+    span M
+    span K
+    span B
+    span H
+    span D
+#root
+  .wrapper
+    - var n = 0
+    - var qx = 12
+    - var qy = 9
+    - var elems = qx * qy - 1
+      while n < elems
+        .dot
+        .dot
+        .bg-line
+        - n++
+      .logo-mkbhd
+        .skewed-box.white.bottom.over
+          .mask
+            .line.left
+        .skewed-box.white.top.over
+          .mask
+            .line.left
+        .skewed-box.white.top
+          .stripe.top
+          .stripe.topBottom
+          .stripe.bottomTop
+          .stripe.bottom
+          .mask
+            .line.top
+            .line.right
+        .skewed-box.pink
+          .stripe.bottom
+          .stripe.top
+          .bg
+        .skewed-box.white.bottom
+          .mask
+            .line.bottom
+            .line.right
+      .stripe.final-stripe.right
+      .stripe.final-stripe.left
+
+ul.recommended-pens
+  li.pen
+    a(href="https://codepen.io/mallendeo/full/wBJQvp" target="_blank")
+    video(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/128337/knob.mp4" autoplay loop)
+  li.pen
+    h2 Other pens you may like
+    a(href="https://codepen.io/mallendeo/full/LZRyMR" target="_blank")
+    video(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/128337/jump.mp4" autoplay loop)
+  li.pen
+    a(href="https://codepen.io/mallendeo/full/FoEJw" target="_blank")
+    video(src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/128337/gc.mp4" autoplay loop)
+      

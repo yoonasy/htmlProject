@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700");
+header {
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 800px;
+  position: relative;
+  min-width: 1200px;
+  font-family: 'Lora', serif;
+}
+
+#slider {
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  top: 0px;
+  overflow: hidden;
+  float: left;
+  padding: 0;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.slide#two .content {
+  color: #fff;
+}
+
+#prev, #next {
+  cursor: pointer;
+  z-index: 100;
+  background: #000;
+  top: 300px;
+  height: 50px;
+  width: 50px;
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+#next {
+  float: right;
+  right: 0px;
+}
+
+#prev {
+  float: left;
+  left: 0px;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #fff;
+  position: relative;
+  top: 20%;
+  right: -40%;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #fff;
+  position: relative;
+  top: 20%;
+  left: 30%;
+}
+
+.content {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  height: 100px;
+  z-index: 99;
+  color: #000;
+  left: 0px;
+  opacity: 1;
+}
+.content h1 {
+  font-size: 3em;
+  margin-bottom: 0px;
+}
+.content h5.by-line {
+  padding: 10px 0px;
+}
+.content p {
+  line-height: 1.5;
+  text-align: left;
+  font-size: 1.2em;
+  padding: 10px 10px 30px;
+}
+.content button {
+  position: relative;
+  padding: 10px 25px;
+  color: #fff;
+  background: #000;
+  border: 3px solid #000;
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 15px auto;
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+  float: left;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+.container div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container .forest {
+  background-image: url("http://res.cloudinary.com/dxcuxowoi/image/upload/v1488858215/background_qinipt.jpg");
+  background-blend-mode: lighten;
+  animation: forestSlide 3.5s 1 ease-in-out forwards;
+}
+.container .overlay {
+  background-image: url("http://res.cloudinary.com/dxcuxowoi/image/upload/v1488959139/bear-bg_ogbfvi.png");
+}
+.container .bear {
+  background-image: url("http://res.cloudinary.com/dxcuxowoi/image/upload/v1488959138/bear_fkpw8s.png"), linear-gradient(to top, transparent, rgba(255, 255, 255, 0.6) 105%);
+  background-blend-mode: soft-light;
+  mix-blend-mode: hard-light;
+}
+
+#two .container .space {
+  background-image: url("http://res.cloudinary.com/dxcuxowoi/image/upload/v1489208866/stars_ax7ikz.png"), linear-gradient(to left, transparent, #000 120%);
+  background-blend-mode: hard-light;
+  animation: slideRight 3.5s 1 ease-in-out forwards;
+}
+#two .container .cowboy {
+  background-image: url("http://res.cloudinary.com/dxcuxowoi/image/upload/v1489218278/cowboy3_u7l8qf.png");
+  mix-blend-mode: hard-light;
+  opacity: .5;
+}
+#two .container .overlay {
+  background-image: url("http://res.cloudinary.com/dxcuxowoi/image/upload/v1489216675/cowboytran2_nm9zkn.png");
+}
+
+#three .container .field {
+  background-position: 0px 0%;
+  background-image: url("http://res.cloudinary.com/dxcuxowoi/image/upload/v1489259247/janecenter_zwa1tt.png");
+  background-blend-mode: scrreen;
+}
+#three .container .overlay {
+  background-image: url("http://res.cloudinary.com/dxcuxowoi/image/upload/v1489259246/janebg_fo1eft.png");
+}
+#three .container .jright {
+  background-image: url("http://res.cloudinary.com/dxcuxowoi/image/upload/v1489262786/janeright2_wu9yuc.png");
+  mix-blend-mode: screen;
+  animation: slideRight 3.5s ease forwards;
+}
+#three .container .jleft {
+  background-image: url("http://res.cloudinary.com/dxcuxowoi/image/upload/v1489262786/janeleft2_smplqu.png");
+  mix-blend-mode: screen;
+  animation: slideLeft 3.5s ease forwards;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes slideLeft {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 15%;
+  }
+}
+@keyframes slideRight {
+  0% {
+    right: 0%;
+  }
+  100% {
+    right: 15%;
+  }
+}
+@keyframes forestSlide {
+  0% {
+    left: -12%;
+  }
+  100% {
+    left: 10%;
+  }
+}
