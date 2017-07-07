@@ -1,0 +1,74 @@
+/**
+ * 
+ * @authors Slice (1695005494@qq.com)
+ * @date    2017-07-07 16:18:51
+ * @version V0.0.1
+ */
+
+* {
+    vertical-align: baseline;
+    border: 0;
+    outline: 0;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.67);
+}
+
+
+input[name="username"] {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 16px;
+    font-size: 16px;
+    padding: 5px 10px;
+    width: 120px;
+    background: 0;
+    color: #fff;
+}
+
+.info {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -104px;
+    padding: 5px 18px;
+    /* background: rgba(0, 0, 0, 0.67); */
+    background: #282828;
+    border-radius: 20px;
+}
+
+.info span {
+    color: #fff;
+}
+
+.dropzone {
+    background: #CDCDCD;
+}
+
+.dropzone .dz-message {
+    margin: 3em;
+}
+
+.dropzone .dz-preview.dz-image-preview {
+    background: #cdcdcd;
+}
+
+.dropzone {
+    padding: 25px 20px;
+}
+
+.dropzone .dz-preview {
+    margin-top: 26px;
+}
+
+form {
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 6px;
+    border: 2px solid #A7A7A7 !important;
+    box-shadow: 0 5px 20px #000;
+}
+
