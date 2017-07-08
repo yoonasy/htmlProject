@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="Keywords" content="" />
+        <meta name="description" content="" />
+        <title>flex居中布局</title>
+        <style>
+
+            * {
+                margin: 0;
+                border: 0;
+                outline: 0;
+                padding: 0;
+                vertical-align: baseline;
+            }
+
+            input[type="text"] {
+                border: 1px solid #e5e5e5;
+                vertical-align: middle;
+                padding-left: 36px;
+                line-height: 30px;
+                height: 30px;
+                font-size: 16px;
+                width: 174px;
+            }
+
+            body {
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+
+
+                font-family: "Microsoft Yahei";
+                font-size: 12px;
+                color: #333;
+                background: #3c9bed;
+
+                /* 水平方向居中 */
+                justify-content: center;
+                /* 垂直方向居中 */
+                align-items: center;
+            }
+
+            body,html {
+                height: 100% !important;
+            }
+
+            .login {
+                width: 300px;
+                background: #fff;
+                /* margin: 0 auto; */
+                text-align: center;
+                padding-bottom: 20px;
+                border-radius: 5px;
+                box-shadow: 0 5px 15px #fff;
+                /* margin-top: 90px; */
+                height: 270px;
+            }
+
+            .ver {
+                position: relative;
+                margin: 0 auto;
+                margin-top: 10px;
+                width: 210px;
+            }
+
+            .ver i {
+                position: absolute;
+                left: 5px;
+                font-size: 22px;
+                top: 50%;
+                margin-top: -12px;
+            }
+
+            .login-title {
+                font-size: 24px;
+                font-weight: 400;
+                color: #3c9bed;
+                padding: 25px 0 10px 0;
+            }
+
+            ::placeholder {
+                color: #ccc;
+            }
+
+            .columns-line {
+                position: absolute;
+                right: 66px;
+                top: 0;
+                line-height: 30px;
+                height: 30px;
+                font-size: 22px;
+                color: #c6c6c6;
+            }
+
+            .code input {
+                width: 104px;
+                padding-right: 70px;
+            }
+
+            .code img {
+                position: absolute;
+                right: 1px;
+                width: 68px;
+                height: 20px;
+                top: 1px;
+                margin-top: 5px;
+            }
+
+            .tag {
+                color: #ff4c4c;
+                font-size: 12px;
+                position: absolute;
+                left: 20px;
+                bottom: -20px;
+            }
+
+            .btn {
+                display: block;
+                width: 210px;
+                height: 36px;
+                line-height: 36px;
+                color: #fff;
+                margin: auto;
+                margin-top: 40px;
+                cursor: pointer;
+                border-radius: 0.3em;
+            }
+
+            .baby-blue-btn:hover {
+                background: #327ebf;
+            }
+
+            .baby-blue-btn {
+                border: 1px solid #3c9bed;
+                background: #3c9bed;
+                box-shadow: 0 2px 5px #327ebf;
+            }
+
+
+
+
+
+        </style>
+        <link rel="stylesheet" href="http://at.alicdn.com/t/font_s376r437rzmvaemi.css" />
+    </head>
+<body>
+
+    <div class="login">
+        <p class="login-title">片片用户登录</p>
+
+        <div class="ver user">
+            <i class="iconfont icon-user3"></i>
+            <input name="username" type="text" placeholder="请输入账号" />
+        </div>
+
+        <div class="ver pass">
+            <i class="iconfont icon-lock5"></i>
+            <input name="password" type="text" placeholder="请输入密码" />
+        </div>
+
+        <div class="ver code">
+            <i class="iconfont icon-key3"></i>
+            <input placeholder="请输入验证码" type="text" maxlength="4" />
+            <span class="columns-line">|</span>
+            <img src="http://reso2.yiihuu.com/1331436-z.jpg" alt="" />
+            <span class="tag">* 验证码不正确</span>
+        </div>
+        <button class="btn baby-blue-btn">登&nbsp;&nbsp;&nbsp;录</button>
+    </div>
+
+
+</body>
+</html>
